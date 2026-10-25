@@ -1,0 +1,12 @@
+// Description:
+//   Test invalide d'instanceof
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 17/01/2026
+
+{
+	if (623825122 instanceof int){}
+}

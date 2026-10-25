@@ -1,0 +1,22 @@
+// Description:
+//    Test des comparaisons avec negation (couvre codeGenGoTo avec b=false)
+//
+// Resultats:
+//    not_lt: false
+//    not_gt: true
+//    not_le: false
+//    not_ge: true
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int a = 5;
+    int b = 10;
+
+    // Negation des comparaisons
+    if (!(a <  b)) { println("not_lt: true"); 1/0;} else { println("not_lt: false");     }
+    if (!(a >  b)) { println("not_gt: true");     } else { println("not_gt: false"); 1/0;}
+    if (!(a <= b)) { println("not_le: true"); 1/0;} else { println("not_le: false");     }
+    if (!(a >= b)) { println("not_ge: true");     } else { println("not_ge: false"); 1/0;}
+}

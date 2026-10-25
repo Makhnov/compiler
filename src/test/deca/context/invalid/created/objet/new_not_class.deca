@@ -1,0 +1,12 @@
+// Description:
+//   Utilisation de new avec un type non-classe
+//
+// Resultats:
+//   Erreur contextuelle
+//
+// Historique:
+//   cree le 18/01/2026
+
+{
+    int x = new int();
+}

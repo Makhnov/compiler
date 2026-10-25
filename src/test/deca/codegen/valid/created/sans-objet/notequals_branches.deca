@@ -1,0 +1,61 @@
+// Description:
+//    Test des différentes branches de NotEquals (!=)
+//
+// Resultats:
+//    x != 0: false
+//    x != 5: true
+//    0 != y: false
+//    a != b: false
+//    c != d: true
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int x = 0;
+    int y = 0;
+    int a = 42;
+    int b = 42;
+    int c = 10;
+    int d = 20;
+
+    // Cas x != 0 (rhs est 0)
+    if (x != 0) {
+        println("x != 0: true");
+        1/0;
+    } else {
+        println("x != 0: false");
+    }
+
+    // Cas x != constante non-zero
+    if (x != 5) {
+        println("x != 5: true");
+    } else {
+        println("x != 5: false");
+        1/0;
+    }
+
+    // Cas 0 != y (lhs est 0)
+    if (0 != y) {
+        println("0 != y: true");
+        1/0;
+    } else {
+        println("0 != y: false");
+    }
+
+    // Cas général a != b
+    if (a != b) {
+        println("a != b: true");
+        1/0;
+    } else {
+        println("a != b: false");
+    }
+
+    // Cas général c != d (true)
+    if (c != d) {
+        println("c != d: true");
+    } else {
+        println("c != d: false");
+        1/0;
+    }
+}

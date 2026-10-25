@@ -1,0 +1,17 @@
+// Description:
+//    Test avec un include redondant (ce qui entraine une double déclaration).
+//
+// Resultats:
+//    (aucun output)
+//
+// Historique:
+//    cree le 12/01/2026
+
+
+{
+    #include "jenexistepas.decah"
+
+    int x = 56465487;
+
+    println(x);
+}

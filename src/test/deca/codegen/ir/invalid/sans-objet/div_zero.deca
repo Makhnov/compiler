@@ -1,0 +1,17 @@
+// Description:
+//    Test de la division par zero en Deca.
+//
+// Resultats:
+//
+// Historique:
+//    cree le 06/01/2026
+
+{
+    int a = 10;
+    int b = 0;
+    int c = a / b; // Division par zero
+    println(c);
+
+    // Division directe par zero
+    println(10 / 0);
+}

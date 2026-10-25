@@ -1,0 +1,39 @@
+{
+    int x = 42*;
+    int y = *161;
+
+    float a = 1.0 +;
+    float b = + 1.0;
+    
+    float c = 1.0 - ();
+    float d = () - 1.0;
+
+    int e = 1 / ();
+    int f = () / 1;
+
+    int g = 1 % ();
+    int h = () % 1;
+
+    boolean b1 = () == 1;
+    boolean b2 =  1 == ();
+    
+    boolean b3 = () >= 1;
+    boolean b4 =  1 >= ();
+    
+    boolean b5 = () <= 1;
+    boolean b6 =  1 <= ();
+
+    boolean b7 =   () && true;
+    boolean b8 = true && ();
+
+    boolean b9  =   () || true;
+    boolean b10 = true || ();
+
+
+    boolean b11 = () > 1;
+    boolean b12 =  1 > ();
+    
+    boolean b13 = () < 1;
+    boolean b14 =  1 < ();
+    
+}

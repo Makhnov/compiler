@@ -1,0 +1,15 @@
+// Description:
+//   Test invalide d'un programme Deca avec déclaration d'une classe dans une méthode.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+
+class Class{
+    void Method(){
+        class otherClass{}
+    }
+}

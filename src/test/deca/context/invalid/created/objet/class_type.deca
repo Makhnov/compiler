@@ -1,0 +1,11 @@
+// Description:
+//   Test invalide d'un programme Deca avec déclaration de classe incorrecte
+//   Règle (2.3)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 12/01/2026
+
+class int {}

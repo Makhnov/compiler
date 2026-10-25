@@ -1,0 +1,25 @@
+// Description:
+//    ecriture de chaines
+//
+// Resultats:
+//    0
+//
+// Historique:
+//    cree le 01/01/2026
+
+{
+  int x;
+  boolean b;
+
+  x = 1;
+  b = false;
+
+  if (x == 0) { ; } else { ; }
+
+  if (b) {
+    println(1);
+    1/0;
+  } else {
+    println(0);
+  }
+}

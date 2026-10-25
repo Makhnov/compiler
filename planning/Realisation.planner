@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<project name="Projet GL" company="Ensimag" manager="" phase="" project-start="20251215T000000Z" mrproject-version="2" calendar="5">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Travaill&#xE9;" description="Un jour de travail normal"/>
+      <day-type id="1" name="Ch&#xF4;m&#xE9;" description="Un jour ch&#xF4;m&#xE9; normal"/>
+      <day-type id="2" name="Utiliser la base" description="Utilise un jour du calendrier de base"/>
+    </day-types>
+    <calendar id="1" name="D&#xE9;faut">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+    <calendar id="2" name="D&#xE9;faut">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20251227" type="day-type" id="0"/>
+        <day date="20251220" type="day-type" id="0"/>
+        <day date="20251213" type="day-type" id="0"/>
+        <day date="20251228" type="day-type" id="0"/>
+        <day date="20251221" type="day-type" id="0"/>
+        <day date="20251214" type="day-type" id="0"/>
+      </days>
+    </calendar>
+    <calendar id="3" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20251225" type="day-type" id="1"/>
+        <day date="20260101" type="day-type" id="1"/>
+        <day date="20251226" type="day-type" id="1"/>
+        <day date="20251223" type="day-type" id="1"/>
+        <day date="20260102" type="day-type" id="1"/>
+        <day date="20251230" type="day-type" id="1"/>
+        <day date="20251227" type="day-type" id="1"/>
+        <day date="20251224" type="day-type" id="1"/>
+        <day date="20260103" type="day-type" id="1"/>
+        <day date="20251231" type="day-type" id="1"/>
+      </days>
+    </calendar>
+    <calendar id="4" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20260110" type="day-type" id="0"/>
+        <day date="20251214" type="day-type" id="0"/>
+        <day date="20251213" type="day-type" id="0"/>
+        <day date="20251228" type="day-type" id="0"/>
+        <day date="20250105" type="day-type" id="0"/>
+        <day date="20251227" type="day-type" id="0"/>
+        <day date="20250104" type="day-type" id="0"/>
+        <day date="20250119" type="day-type" id="0"/>
+        <day date="20250118" type="day-type" id="0"/>
+        <day date="20260125" type="day-type" id="0"/>
+        <day date="20260124" type="day-type" id="0"/>
+        <day date="20260118" type="day-type" id="0"/>
+        <day date="20251207" type="day-type" id="0"/>
+        <day date="20251206" type="day-type" id="0"/>
+        <day date="20251221" type="day-type" id="0"/>
+        <day date="20251220" type="day-type" id="0"/>
+        <day date="20260104" type="day-type" id="0"/>
+        <day date="20250112" type="day-type" id="0"/>
+        <day date="20260103" type="day-type" id="0"/>
+        <day date="20250111" type="day-type" id="0"/>
+        <day date="20250126" type="day-type" id="0"/>
+        <day date="20260117" type="day-type" id="0"/>
+        <day date="20250125" type="day-type" id="0"/>
+        <day date="20260131" type="day-type" id="0"/>
+        <day date="20260111" type="day-type" id="0"/>
+      </days>
+    </calendar>
+    <calendar id="5" name="D&#xE9;faut">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20251225" type="day-type" id="1"/>
+        <day date="20251214" type="day-type" id="0"/>
+        <day date="20251213" type="day-type" id="0"/>
+        <day date="20251228" type="day-type" id="0"/>
+        <day date="20251227" type="day-type" id="0"/>
+        <day date="20260111" type="day-type" id="0"/>
+        <day date="20260110" type="day-type" id="0"/>
+        <day date="20260125" type="day-type" id="0"/>
+        <day date="20260124" type="day-type" id="0"/>
+        <day date="20251207" type="day-type" id="0"/>
+        <day date="20251206" type="day-type" id="0"/>
+        <day date="20251221" type="day-type" id="0"/>
+        <day date="20251220" type="day-type" id="0"/>
+        <day date="20260104" type="day-type" id="0"/>
+        <day date="20260103" type="day-type" id="0"/>
+        <day date="20260118" type="day-type" id="0"/>
+        <day date="20260117" type="day-type" id="0"/>
+        <day date="20260131" type="day-type" id="0"/>
+      </days>
+    </calendar>
+    <calendar id="6" name="D&#xE9;faut">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Analyse lexicosyntaxique" note="" work="288000" duration="57600" start="20251215T000000Z" end="20251216T170000Z" work-start="20251215T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Lexeur &amp; Tests" note="" work="115200" duration="57600" start="20251215T000000Z" end="20251216T170000Z" work-start="20251215T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="Parseur &amp; Tests" note="" work="115200" duration="57600" start="20251215T000000Z" end="20251216T170000Z" work-start="20251215T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="4" name="SWOT/Charte/Planning" note="" work="57600" duration="57600" start="20251215T000000Z" end="20251216T170000Z" work-start="20251215T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="5" name="Compilateur g&#xE9;rant Hello World" note="" work="115200" duration="57600" start="20251216T170000Z" end="20251218T170000Z" work-start="20251217T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="1" type="FS"/>
+      </predecessors>
+      <task id="6" name="Tests" note="" work="57600" duration="57600" start="20251216T170000Z" end="20251218T170000Z" work-start="20251217T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="7" name="V&#xE9;rification contextuelle println " note="" work="28800" duration="28800" start="20251216T170000Z" end="20251217T170000Z" work-start="20251217T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="8" name="G&#xE9;n&#xE9;ration de code  (IMA minimale pour Hello World)" note="" work="28800" duration="28800" start="20251216T170000Z" end="20251217T170000Z" work-start="20251217T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="9" name="Compilateur sans objet" note="" work="1584000" duration="460800" start="20251218T170000Z" end="20260104T170000Z" work-start="20251219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="5" type="FS"/>
+      </predecessors>
+      <task id="10" name="Socle contextuel (types/env/expr)" note="" work="345600" duration="86400" start="20251218T170000Z" end="20251221T170000Z" work-start="20251219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="11" name="EnvironmentType" note="" work="86400" duration="86400" start="20251218T170000Z" end="20251221T170000Z" work-start="20251219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="12" name="EnvironmentExp" note="" work="86400" duration="86400" start="20251218T170000Z" end="20251221T170000Z" work-start="20251219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="13" name="V&#xE9;rification contextuelle (v&#xE9;rification des noeuds)" note="" work="86400" duration="86400" start="20251218T170000Z" end="20251221T170000Z" work-start="20251219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="14" name="Tests " note="" work="86400" duration="86400" start="20251218T170000Z" end="20251221T170000Z" work-start="20251219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+      <task id="15" name="Contextuel complet (DeclVar/Assign/Print/Control)" note="" work="460800" duration="115200" start="20251221T170000Z" end="20251226T170000Z" work-start="20251222T080000Z" percent-complete="14" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="10" type="FS"/>
+        </predecessors>
+        <task id="16" name="DeclVar + init" note="" work="115200" duration="115200" start="20251221T170000Z" end="20251226T170000Z" work-start="20251222T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="17" name="Assign + LValue" note="" work="115200" duration="115200" start="20251221T170000Z" end="20251226T170000Z" work-start="20251222T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="18" name="Print/Println (types imprimables)" note="" work="115200" duration="115200" start="20251221T170000Z" end="20251226T170000Z" work-start="20251222T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="19" name="Tests (contextuel complet sans-objet)" note="" work="115200" duration="115200" start="20251221T170000Z" end="20251226T170000Z" work-start="20251222T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+      <task id="20" name="Generation de code (sans-objet)" note="" work="777600" duration="259200" start="20251226T170000Z" end="20260104T170000Z" work-start="20251227T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="15" type="FS"/>
+        </predecessors>
+        <task id="21" name="IMAProgram minimal + emission HALT" note="" work="259200" duration="259200" start="20251226T170000Z" end="20260104T170000Z" work-start="20251227T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="22" name="Codegen StringLiteral/Println (WSTR/WNL)" note="" work="259200" duration="259200" start="20251226T170000Z" end="20260104T170000Z" work-start="20251227T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="23" name="Tests gencode (basic-gencode + hello-world)" note="" work="259200" duration="259200" start="20251226T170000Z" end="20260104T170000Z" work-start="20251227T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+    </task>
+    <task id="24" name="Compilateur pour la totalit&#xE9; du langage" note="" work="1219500" duration="417600" start="20260104T170000Z" end="20260119T120000Z" work-start="20260105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="9" type="FS"/>
+      </predecessors>
+      <task id="25" name="Syntaxe Objet : classes, champs, m&#xE9;thodes, expressions" note="" work="244800" duration="244800" start="20260104T170000Z" end="20260113T120000Z" work-start="20260105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="26" name="Contexte Orient&#xE9; Objet " note="" work="372600" duration="125100" start="20260113T120000Z" end="20260117T154500Z" work-start="20260113T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="27" name="1 - Classes et H&#xE9;ritage" note="" work="123300" duration="123300" start="20260113T120000Z" end="20260117T151500Z" work-start="20260113T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="25" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="28" name="2 - Champs et M&#xE9;thodes" note="" work="124200" duration="124200" start="20260113T120000Z" end="20260117T153000Z" work-start="20260113T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="25" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="29" name="3 - Typage des expressions" note="" work="125100" duration="125100" start="20260113T120000Z" end="20260117T154500Z" work-start="20260113T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="25" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="30" name="G&#xE9;n&#xE9;ration de code Objet " note="" work="190800" duration="47700" start="20260117T154500Z" end="20260119T120000Z" work-start="20260117T154500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="26" type="FS"/>
+        </predecessors>
+        <task id="31" name="1 - Construction des tables des m&#xE9;thodes (vtable) " note="" work="47700" duration="47700" start="20260117T154500Z" end="20260119T120000Z" work-start="20260117T154500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="32" name="2 - new + init (Passe 2)" note="" work="47700" duration="47700" start="20260117T154500Z" end="20260119T120000Z" work-start="20260117T154500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="33" name="3 - Appel m&#xE9;thode (Passe 2)" note="" work="47700" duration="47700" start="20260117T154500Z" end="20260119T120000Z" work-start="20260117T154500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="34" name="4 - Tests GenCode" note="" work="47700" duration="47700" start="20260117T154500Z" end="20260119T120000Z" work-start="20260117T154500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+      <task id="35" name="Tests Orient&#xE9;s Objet " note="" work="411300" duration="411300" start="20260104T170000Z" end="20260119T101500Z" work-start="20260105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="36" name="Rendu version interm&#xE9;diaire" note="" work="0" duration="0" start="20260112T000000Z" end="20260112T000000Z" work-start="20260112T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20260112T000000Z"/>
+    </task>
+    <task id="37" name="Rendu Final" note="" work="0" duration="0" start="20260119T000000Z" end="20260119T000000Z" work-start="20260119T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20260119T000000Z"/>
+    </task>
+    <task id="38" name="Rendu Bilan" note="" work="0" duration="0" start="20260121T000000Z" end="20260121T000000Z" work-start="20260121T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20260121T000000Z"/>
+    </task>
+    <task id="39" name="Rendu documentation" note="" work="0" duration="0" start="20260112T000000Z" end="20260112T000000Z" work-start="20260112T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20260112T000000Z"/>
+    </task>
+    <task id="40" name="Soutenance" note="" work="0" duration="0" start="20260123T000000Z" end="20260123T000000Z" work-start="20260123T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20260123T000000Z"/>
+    </task>
+    <task id="41" name="Renforcement de la base de test (Contexte, G&#xE9;n&#xE9;ration de Code) " note="" work="158400" duration="158400" start="20260104T170000Z" end="20260110T120000Z" work-start="20260105T080000Z" percent-complete="45" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="9" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="42" name="Sp&#xE9;cification de l'extension riscV (algorithmes)" note="" work="72000" duration="72000" start="20260104T170000Z" end="20260107T120000Z" work-start="20260105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="9" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="43" name="Gestion des rendus + Matrice des risque (risque + proba + gravit&#xE9;)" note="" work="72000" duration="72000" start="20260104T170000Z" end="20260107T120000Z" work-start="20260105T080000Z" percent-complete="58" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="9" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="44" name="Extension RiscV fonctionnelle" note="" work="230400" duration="230400" start="20260112T000000Z" end="20260119T170000Z" work-start="20260112T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="36" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="45" name="Extension RISC-V avanc&#xE9;e" note="" work="100800" duration="100800" start="20260119T170000Z" end="20260123T120000Z" work-start="20260120T080000Z" percent-complete="49" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="44" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="46" name="Rendu Final" note="" work="1216800" duration="536400" start="20260104T170000Z" end="20260123T140000Z" work-start="20260105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="47" name="Documentation utilisateur" note="" work="230400" duration="230400" start="20260112T000000Z" end="20260119T170000Z" work-start="20260112T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="36" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="48" name="Documentation de conception " note="" work="129600" duration="129600" start="20260119T000000Z" end="20260123T120000Z" work-start="20260119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="37" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="49" name="Documentation validation" note="" work="131400" duration="131400" start="20260119T000000Z" end="20260123T133000Z" work-start="20260119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="37" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="50" name="Documentation extension " note="" work="536400" duration="536400" start="20260104T170000Z" end="20260123T140000Z" work-start="20260105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="9" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="51" name="Analyse &#xE9;nerg&#xE9;tique " note="" work="131400" duration="131400" start="20260119T000000Z" end="20260123T133000Z" work-start="20260119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="37" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="52" name="Bilan Gestion d'&#xE9;quipe " note="" work="57600" duration="57600" start="20260119T000000Z" end="20260120T170000Z" work-start="20260119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="37" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources>
+    <resource id="1" name="Etudiant 5" short-name="E5" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="2" name="Etudiant 4" short-name="E4" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="3" name="Etudiant 3" short-name="E3" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="4" name="Etudiant 2" short-name="E2" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="5" name="Etudiant 1" short-name="E1" type="1" units="0" email="" note="" std-rate="0"/>
+  </resources>
+  <allocations>
+    <allocation task-id="5" resource-id="1" units="100"/>
+    <allocation task-id="9" resource-id="2" units="100"/>
+    <allocation task-id="5" resource-id="2" units="100"/>
+    <allocation task-id="3" resource-id="2" units="100"/>
+    <allocation task-id="9" resource-id="3" units="100"/>
+    <allocation task-id="5" resource-id="3" units="100"/>
+    <allocation task-id="3" resource-id="3" units="100"/>
+    <allocation task-id="8" resource-id="4" units="100"/>
+    <allocation task-id="9" resource-id="4" units="100"/>
+    <allocation task-id="5" resource-id="4" units="100"/>
+    <allocation task-id="2" resource-id="4" units="100"/>
+    <allocation task-id="9" resource-id="5" units="100"/>
+    <allocation task-id="5" resource-id="5" units="100"/>
+    <allocation task-id="2" resource-id="5" units="100"/>
+  </allocations>
+</project>

@@ -1,0 +1,14 @@
+// Resultats:
+//    2
+//
+// Historique:
+class A {
+    int x = 1;
+}
+class B extends A {
+    int x = 2; // Nouveau champ qui cache celui de A
+}
+{
+    B b = new B();
+    println(b.x); // Doit afficher 2
+}

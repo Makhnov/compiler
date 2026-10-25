@@ -1,0 +1,18 @@
+// Description:
+//    Test avec un include redondant (ce qui entraine une double déclaration).
+//
+// Resultats:
+//    (aucun output)
+//
+// Historique:
+//    cree le 12/01/2026
+
+
+{
+    #include "basic.decah"
+    #include "basic.decah"
+
+    int x = 200;
+
+    println(x / y);
+}

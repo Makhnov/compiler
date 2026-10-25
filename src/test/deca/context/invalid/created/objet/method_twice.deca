@@ -1,0 +1,15 @@
+// Description:
+//   Test invalide d'un programme Deca avec déclaration de méthode incorrecte
+//   Règle (2.5)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 12/01/2026
+
+
+class Classe {
+    int Method(){}
+    float Method(){}
+}

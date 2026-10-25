@@ -1,0 +1,15 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int x;
+    void m() {}
+}
+class B extends A {
+    // B a x et m() par héritage
+}
+{
+    B b = new B();
+    b.x = 1;
+    b.m();
+}

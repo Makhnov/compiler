@@ -1,0 +1,26 @@
+# Do not version generated files.
+target/
+src/test/script/logs/
+
+# These are IDE-specific files. We version pom.xml, and rely on IDE
+# integration with maven (or with maven's generation of IDE files like
+# mvn eclipse:eclipse).
+.classpath
+.project
+.metadata
+.settings
+
+# Configs locales
+# .vscode Désactivé pour avoir un formattage commun, a voir ?
+
+# Extension ANTLR4
+.antlr/
+
+# File Type
+*.ass
+*.s
+*.ssa
+*.qbe
+
+# Documents persos
+docs/

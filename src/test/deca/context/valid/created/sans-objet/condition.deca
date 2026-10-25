@@ -1,0 +1,21 @@
+    // Description:
+    //   Test d'un programme Deca avec une condition valable (un bool);
+    //   Règle (3.29) de la grammaire attribuée
+    //
+    // Resultats:
+    //   La condition a marché 
+    //
+    // Historique:
+    //    cree le 05/01/2026
+
+{
+    boolean x = true;
+    if (x) {
+        println("La condition a marché");
+    }
+    else {
+        println("La condition n'a pas marché");  
+    }
+}
+
+

@@ -1,0 +1,21 @@
+// Description:
+//    Test avec un include chainé.
+//
+// Resultats:
+//    10
+//
+// Historique:
+//    cree le 12/01/2026
+
+
+{
+    #include "chain_head.decah"
+
+    int x = 24;
+
+    if (x % y == 0) {
+        println(x / z - z);
+    } else {
+        println(x * z);
+    }
+}

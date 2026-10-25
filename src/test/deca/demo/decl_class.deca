@@ -1,0 +1,15 @@
+// Description:
+//   Test d'un programme Deca avec des déclarations de class.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 15/01/2026
+
+
+class Classe{}
+
+{
+Classe Class1 = new Classe(), Class2 = new Classe(), Classe = new Classe();
+}

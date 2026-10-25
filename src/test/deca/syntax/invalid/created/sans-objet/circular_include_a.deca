@@ -1,0 +1,15 @@
+// Description:
+//    Test d'inclusion circulaire - utilise circle_left.decah et circle_right.decah
+//    qui s'incluent mutuellement (cycle dans les headers).
+//
+// Resultats:
+//    Erreur
+//
+// Historique:
+//    cree le 16/01/2026
+
+#include "circle_left.decah"
+
+{
+    int z = 1;
+}

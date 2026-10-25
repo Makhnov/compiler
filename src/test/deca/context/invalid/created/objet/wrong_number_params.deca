@@ -1,0 +1,18 @@
+// Description:
+//   Appel de méthode avec mauvais nombre de paramètres
+//
+// Resultats:
+//   Erreur contextuelle
+//
+// Historique:
+//   cree le 18/01/2026
+
+class MaClasse {
+    void methode(int a, int b) {
+    }
+}
+
+{
+    MaClasse obj = new MaClasse();
+    obj.methode(1);
+}

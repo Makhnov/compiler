@@ -1,0 +1,72 @@
+// Description:
+//    Test des comparaisons {==, !=, <, <= , >, >=} 
+//
+// Resultats:
+//    a < b : OK
+//    a <= b : OK
+//    b > a : OK
+//    b >= a : OK
+//    b == c : OK
+//    d < f : OK
+//    e <= f : OK
+//    f > e : OK
+//    d == e : OK
+//    a != b : OK
+//    d != f : OK
+//    a < f : OK
+//
+// Historique:
+//    cree le 07/01/2026
+
+{
+    int a = 5;
+    int b = 6;
+    int c = 6;
+    float d = 2.0;
+    float e = 2.0;
+    float f = 10.0;
+    if (a < b){
+        println("a < b : OK");
+    } else {println("KO"); 1/0;}
+    if (a <= b){
+        println("a <= b : OK");
+    } else {println("KO"); 1/0;}
+    if (b > a){
+        println("b > a : OK");
+    } else {println("KO"); 1/0;}
+    if (b >= a){
+        println("b >= a : OK");
+    } else {println("KO"); 1/0;}
+    if (b == c){
+        println("b == c : OK");
+    } else {println("KO"); 1/0;}
+    if (d < f){
+        println("d < f : OK");
+    } else {println("KO"); 1/0;}
+    if (e <= f){
+        println("e <= f : OK");
+    } else {println("KO"); 1/0;}
+    if (f > e){
+        println("f > e : OK");
+    } else {println("KO"); 1/0;}
+    if (d == e){
+        println("d == e : OK");
+    } else {println("KO"); 1/0;}
+    if (a != b){
+        println("a != b : OK");
+    } else {println("KO"); 1/0;}
+    if (d != f){
+        println("d != f : OK");
+    } else {println("KO"); 1/0;}
+    if (a < f){
+        println("a < f : OK");
+    } else {println("KO"); 1/0;}
+    if (a > b){
+        println("Erreur : a est plus petit que b");
+        1/0;
+    }
+    if (d != e){
+        println("Erreur : d et e sont égaux");
+        1/0;
+    }
+}

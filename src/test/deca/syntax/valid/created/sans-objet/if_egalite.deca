@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec de if et une egalite (pas == mais =).
+//   Doit fonctionner car if_then_else -> 'if' '(' expr ')' '{' liste_inst '}'
+//   Ou expr peut etre une affectation.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    if (a = b) {
+        result = 1;
+    }
+}

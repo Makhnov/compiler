@@ -1,0 +1,20 @@
+// Description:
+//    Test d'un cast invalide en Deca.
+//
+// Resultats:
+//
+// Historique:
+//    cree le 08/01/2026
+
+class A {
+}
+
+class B {
+}
+
+{
+    A a = new A();
+    // Tentative de cast invalide
+    B b = (B) (a); // Devrait provoquer une erreur de cast
+    println(b);
+}

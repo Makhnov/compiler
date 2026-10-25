@@ -1,0 +1,20 @@
+// Description:
+//   Test d'un programme Deca avec des déclarations de classe valides.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+class ____{}
+
+class $$$${}
+
+class _1234{}
+
+class class_{}
+
+class class${}
+
+class a{}class b{}class c{}

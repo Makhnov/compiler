@@ -1,0 +1,19 @@
+// Description:
+//    Test de ASM method
+//
+// Resultats:
+//    Hello From ASM
+//
+// Historique:
+//    cree le 19/01/2026
+
+class A {
+    void m() asm (
+"WSTR \"Hello From ASM\"
+WNL");
+}
+
+{
+    A a = new A();
+    a.m();
+}

@@ -1,0 +1,26 @@
+// Description:
+//   Test d'un programme Deca avec plusieurs declarations de champ.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+class Class1 {
+    int i1, i2, i3;
+    protected int i4, i5, i6;
+    float f1, f2, f3;
+    protected float f4, f5, f6;
+    boolean b1, b2, b3;
+    protected boolean b4, b5, b6;
+}
+
+class Class2 {
+    int field1;
+    void Method1(){}
+    float field2;
+    void Method2(){}
+    boolean field3;
+    void Method3(){}
+}

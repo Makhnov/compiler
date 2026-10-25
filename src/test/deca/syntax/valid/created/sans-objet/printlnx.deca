@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec des printlnx valides.
+//
+// Resultats:
+//   FF
+//   FF
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    printlnx(255); // resultat attendu : FF
+    printlnx(255); // resultat attendu : FF
+}

@@ -1,0 +1,19 @@
+//  Overflow lors d'un modulo d'entiers
+//
+// Resultats attendus:
+//      0
+//      0
+//    
+//
+// Historique:
+//    cree le 10/01/2026
+
+{
+    int x = -2147483647;
+    int y = -2;
+    int z = x % y;
+    println(z);
+
+    // Modulo direct
+    println(-2147483648 % -1);
+}

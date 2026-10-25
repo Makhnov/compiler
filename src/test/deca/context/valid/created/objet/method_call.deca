@@ -1,0 +1,40 @@
+// Description:
+//   Test valide d'un programme Deca avec des appels de méthodes
+//   Règle (3.71)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Type{}
+
+class Class {
+    void Method(Type var){}
+    void MethodFloat(float f){}
+    void MethodInt(int i){}
+    void MethodBoolean(boolean b){}
+    void MethodClass(Class c){}
+}
+
+{
+    int i;
+    float f;
+    boolean b;
+    Class classe = new Class();
+    Type var = new Type();
+
+    classe.Method(var);
+
+    classe.MethodFloat(1);
+    classe.MethodFloat(1.5);
+    classe.MethodFloat(f);
+
+    classe.MethodInt(1);
+    classe.MethodInt(i);
+
+    classe.MethodBoolean(true);
+    classe.MethodBoolean(b);
+
+    classe.MethodClass(classe);
+}

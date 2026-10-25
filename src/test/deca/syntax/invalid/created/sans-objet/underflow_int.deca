@@ -1,0 +1,15 @@
+// Description:
+//   Test d'un programme Deca avec un underflow d'un int. Test invalide selon la spec car au lexer INT
+//   = '0' + POSITIVE_DIGIT DIGIT*. 
+//
+// Resultats:
+//     (aucune output)
+//
+// Historique:
+//    cree le 19/01/2025
+
+
+{
+    int i = -2147483648;
+    println(i);
+}

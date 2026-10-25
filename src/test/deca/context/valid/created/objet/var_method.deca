@@ -1,0 +1,23 @@
+// Description:
+//   Test valide d'un programme Deca avec des déclarations de paramètres de méthodes correctes
+//   Règle (2.9), (3.13)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Type{}
+
+class Class {
+    void TypeMethod(){
+        int i1;
+        float f1;
+        boolean b1;
+        Type t1;
+        int i2 = 1;
+        float f2 = 1.5;
+        boolean b2 = true;
+        Type t2 = new Type();
+    }
+}

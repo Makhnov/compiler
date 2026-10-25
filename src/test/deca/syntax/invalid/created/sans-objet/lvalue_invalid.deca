@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec une lvalue invalide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+{
+    int a;
+    1 = a;
+}

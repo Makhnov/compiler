@@ -1,0 +1,20 @@
+// Description:
+//   Test d'un programme Deca avec plusieurs héritages.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+class ParentClass {}
+
+class extends_{}
+
+class extends${}
+
+class ChildClass extends extends_{}
+
+class ChildClass extends extends${}
+
+

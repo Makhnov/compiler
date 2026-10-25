@@ -1,0 +1,18 @@
+// Description:
+//   Test d'expressions flottantes simples en Deca
+//
+// Resultats:
+//    1.4
+//    3.6399999
+//
+// Historique:
+//    cree le 20/12/2025
+
+{
+   float i ; 
+   i = 1.4;
+   println(i);
+   i = i * 2.6;
+   println(i);
+}
+

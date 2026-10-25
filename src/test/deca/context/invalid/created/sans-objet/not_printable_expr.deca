@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec une expression qui n'est pas imprimable;
+//   Règle (3.31) de la grammaire attribuée
+//
+// Resultats:
+//   Ligne 13 : Expression non imprimable
+//
+// Historique:
+//    cree le 19/12/2025
+
+{
+    boolean x;
+    print(x);
+}

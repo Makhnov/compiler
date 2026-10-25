@@ -1,0 +1,36 @@
+// Description:
+//   Test de print complexe en Deca
+//
+// Resultats:
+//     - Entier : 42
+//     - Float : 3.14
+//     - Addition : 12
+//     - Soustraction : 6
+//     - Division : 4
+//     - Multiplication : 54
+//     - Expression mixte : 6
+//     - Chaîne de caractères : Hello, World!
+//     - Combinaison : 5 * 6 = 30
+//    - Print entier : 100, Printx entier : 100, 
+//    Printlnx float : 2.710x402d70a4
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    // Test de print complexe
+    println(" - Entier : ", 42); // 42
+    println(" - Float : ", 3.14); // 3.14
+    println(" - Addition : ", (5 + 7)); // 12
+    println(" - Soustraction : ", (10 - 4)); // 6
+    println(" - Division : ", (20 / 5)); // 4
+    println(" - Multiplication : ", (6 * 9)); // 54
+    println(" - Expression mixte : ", (10 - 2 * 3 + 4 / 2)); // 6
+    println(" - Chaîne de caractères : ", "Hello, World!"); // Hello, World!
+    println(" - Combinaison : ", "5 * 6 = ", (5 * 6)); // 5 * 6 = 30
+
+    // Test de print, printx, printlnx
+    print("- Print entier : ", 100, ", "); // Print entier : 100
+    printlnx("Printx entier : ", 100, ", "); // Printx entier : 100
+    printlnx("Printlnx float : ", 2.71); // Printlnx float : 0x1.5ae148p+1, soit environ 2.71
+}

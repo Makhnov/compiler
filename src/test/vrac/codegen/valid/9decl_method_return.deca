@@ -1,0 +1,8 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int getX() {
+        return 5;
+    }
+}

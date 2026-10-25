@@ -1,0 +1,22 @@
+// Description:
+//  Affectation dans une expr
+//
+// Resultats:
+//    37
+//    42-5
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int a;
+    int b;
+
+    int y = (a=42) + (b=-5);
+    println(y);
+    println(a, b);
+    if (y != 37 || a != 42 || b != -5) {
+        println("KO");
+        1/0;
+    }
+}

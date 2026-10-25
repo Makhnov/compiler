@@ -1,0 +1,201 @@
+// Description:
+//   Test d'un programme Deca avec plusieurs opérations binaires;
+//   Règle (3.33) de la grammaire attribuée
+//
+// Resultats:
+//
+// Historique:
+//    cree le 14/01/2026
+
+class Class1{}
+class Class2{}
+
+{
+    int i1 = 1;
+    int i2 = 1;
+    int i;
+    float f1 = 1.5;
+    float f2 = 1.5;
+    float f;
+    boolean b1 = true;
+    boolean b2 = false;
+    boolean b;
+    Class1 class1;
+    Class2 class2; 
+
+
+    //SANS IMMEDIATS
+
+    // int x inti
+    i = i1 + i2;
+    i = i2 + i1;
+    i = i1 - i2;
+    i = i2 - i1;
+    i = i1 / i2;
+    i = i2 / i1;
+    i = i1 * i2;
+    i = i2 * i1;
+    b = i1 == i2;
+    b = i2 == i1;
+    b = i1 != i2;
+    b = i2 != i1;
+    b = i1 <= i2;
+    b = i2 <= i1;
+    b = i1 < i2;
+    b = i2 < i1;
+    b = i1 >= i2;
+    b = i2 >= i1;
+    b = i1 > i2;
+    b = i2 > i1;
+
+    // float x int | int x float
+    f = i1 + f1;
+    f = f1 + i1;
+    f = i1 - f1;
+    f = f1 - i1;
+    f = i1 / f1;
+    f = f1 / i1;
+    f = i1 * f1;
+    f = f1 * i1;
+    b = i1 == f1;
+    b = f1 == i1;
+    b = i1 != f1;
+    b = f1 != i1;
+    b = i1 <= f1;
+    b = f1 <= i1;
+    b = i1 < f1;
+    b = f1 < i1;
+    b = i1 >= f1;
+    b = f1 >= i1;
+    b = i1 > f1;
+    b = f1 > i1;
+
+    // float x float
+    f = f2 + f1;
+    f = f1 + f2;
+    f = f2 - f1;
+    f = f1 - f2;
+    f = f2 / f1;
+    f = f1 / f2;
+    f = f2 * f1;
+    f = f1 * f2;
+    b = f2 == f1;
+    b = f1 == f2;
+    b = f2 != f1;
+    b = f1 != f2;
+    b = f2 <= f1;
+    b = f1 <= f2;
+    b = f2 < f1;
+    b = f1 < f2;
+    b = f2 >= f1;
+    b = f1 >= f2;
+    b = f2 > f1;
+    b = f1 > f2;
+
+    // eq / neq
+    b = class1 == class2;
+    b = class1 == null;
+    b = null == class1;
+    b = class2 == class1;
+    b = class1 != class2;
+    b = class1 != null;
+    b = null != class1;
+    b = class2 != class1;
+
+    // bool x bool
+    b = b1 && b2;
+    b = b1 || b2;
+    b = b1 == b2;
+    b = b1 != b2;
+
+    // AVEC IMMEDIAT
+
+    // int x int
+    i = i1 + 1;
+    i = 1 + i1;
+    i = i1 - 1;
+    i = 1 - i1;
+    i = i1 / 1;
+    i = 1 / i1;
+    i = i1 * 1;
+    i = 1 * i1;
+    b = i1 == 1;
+    b = 1 == i1;
+    b = i1 != 1;
+    b = 1 != i1;
+    b = i1 <= 1;
+    b = 1 <= i1;
+    b = i1 < 1;
+    b = 1 < i1;
+    b = i1 >= 1;
+    b = 1 >= i1;
+    b = i1 > 1;
+    b = 1 > i1;
+
+    // float x inti
+    f = 1 + f1;
+    f = f1 + 1;
+    f = 1 - f1;
+    f = f1 - 1;
+    f = 1 / f1;
+    f = f1 / 1;
+    f = 1 * f1;
+    f = f1 * 1;
+    b = 1 == f1;
+    b = f1 == 1;
+    b = 1 != f1;
+    b = f1 != 1;
+    b = 1 <= f1;
+    b = f1 <= 1;
+    b = 1 < f1;
+    b = f1 < 1;
+    b = 1 >= f1;
+    b = f1 >= 1;
+    b = 1 > f1;
+    b = f1 > 1;
+
+    // int x floati
+    f = i1 + 1.5;
+    f = 1.5 + i1;
+    f = i1 - 1.5;
+    f = 1.5 - i1;
+    f = i1 / 1.5;
+    f = 1.5 / i1;
+    f = i1 * 1.5;
+    f = 1.5 * i1;
+    b = i1 == 1.5;
+    b = 1.5 == i1;
+    b = i1 != 1.5;
+    b = 1.5 != i1;
+    b = i1 <= 1.5;
+    b = 1.5 <= i1;
+    b = i1 < 1.5;
+    b = 1.5 < i1;
+    b = i1 >= 1.5;
+    b = 1.5 >= i1;
+    b = i1 > 1.5;
+    b = 1.5 > i1;
+
+    // float x float
+    f = 1.5 + f1;
+    f = f1 + 1.5;
+    f = 1.5 - f1;
+    f = f1 - 1.5;
+    f = 1.5 / f1;
+    f = f1 / 1.5;
+    f = 1.5 * f1;
+    f = f1 * 1.5;
+    b = 1.5 == f1;
+    b = f1 == 1.5;
+    b = 1.5 != f1;
+    b = f1 != 1.5;
+    b = 1.5 <= f1;
+    b = f1 <= 1.5;
+    b = 1.5 < f1;
+    b = f1 < 1.5;
+    b = 1.5 >= f1;
+    b = f1 >= 1.5;
+    b = 1.5 > f1;
+    b = f1 > 1.5;
+
+}

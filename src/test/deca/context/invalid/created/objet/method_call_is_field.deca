@@ -1,0 +1,17 @@
+// Description:
+//   Appel d'un champ comme une méthode
+//
+// Resultats:
+//   Erreur contextuelle
+//
+// Historique:
+//   cree le 18/01/2026
+
+class MaClasse {
+    int champ;
+}
+
+{
+    MaClasse obj = new MaClasse();
+    obj.champ();
+}

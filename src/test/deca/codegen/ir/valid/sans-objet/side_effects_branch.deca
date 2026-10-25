@@ -1,0 +1,57 @@
+// Description:
+//    Vérifie les effets de bords dans la logique de branchements et de flots de controle.
+//
+// Resultats:
+//    0
+//    0
+//    3
+//    4
+//    1
+//
+// Historique:
+//    créé le 12/01/2026
+
+{
+    int x;
+
+    // false && any : RHS ne doit pas être évalué
+    x = 0;
+    if (false && ((x = 1) == 1)) {
+        println(999);
+        1/0;
+    }
+    println(x);
+    if (x != 0){println("KO"); 1/0;}
+
+    // true || any : RHS ne doit pas être évalué
+    x = 0;
+    if (true || ((x = 2) == 2)) {
+        // rien
+    }
+    println(x);
+    if (x != 0){println("KO"); 1/0;}
+
+    // true && any : RHS doit être évalué
+    x = 0;
+    if (true && ((x = 3) == 3)) {
+        // rien
+    }
+    println(x);
+    if (x != 3){println("KO"); 1/0;}
+
+    // false || any : RHS doit être évalué
+    x = 0;
+    if (false || ((x = 4) == 4)) {
+        // rien
+    }
+    println(x);
+    if (x != 4){println("KO"); 1/0;}
+
+    // Court-circuit qui évite une erreur : pas de division par zéro
+    x = 1;
+    if (true || ((1 / (x = 0)) == 0)) {
+        // RHS ne doit jamais s'exécuter
+    }
+    println(1);
+    if (x != 1){println("KO"); 1/0;}
+}

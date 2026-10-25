@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec un double déclaration d'un même identificateur;
+//   Règle (3.17) de la grammaire attribuée
+//
+// Resultats:
+//   Ligne 12 : Identificateur x déjà déclaré
+// Historique:
+//    cree le 18/12/2025
+
+{
+    int x;
+    int x;
+}

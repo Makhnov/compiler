@@ -1,0 +1,25 @@
+// Description:
+//   Test du while en Deca
+//
+// Resultats:
+//    i: 100
+//    y: 210
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    int i = 0;
+    int y = 10;
+    while (i < 100) {
+        i = i + 1;
+        y = y + 2;
+    }
+
+    if (i != 100 || y != 210){
+        println("KO");
+        1/0;
+    }
+    println("i: ", i); // i: 100
+    println("y: ", y); // y: 210
+}

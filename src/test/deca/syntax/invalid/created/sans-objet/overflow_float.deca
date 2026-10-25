@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec un interger invalide (trop grand);
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+{
+    float x = 3.4028235e+39; // Overflow float trop grand ((approx 3.4e+38) + 1)
+}

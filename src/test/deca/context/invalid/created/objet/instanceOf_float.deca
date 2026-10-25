@@ -1,0 +1,12 @@
+// Description:
+//   Test invalide d'instanceof
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 17/01/2026
+
+{
+	if (6735429.8354 instanceof float){}
+}

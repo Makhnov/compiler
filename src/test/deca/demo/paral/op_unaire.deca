@@ -1,0 +1,30 @@
+// Description:
+//   Test d'un programme Deca avec plusieurs opérations unaires;
+//   Règle (3.37) de la grammaire attribuée
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//    cree le 14/01/2026
+
+{
+    int i1 = 1;
+    int i;
+    float f1 = 1.5;
+    float f;
+    boolean b1 = true;
+    boolean b;
+
+
+    //SANS IMMEDIATS
+    i = - i1;
+    f = - f1;
+    b = ! b1;
+
+    //AVEC IMMEDIATS
+    i = - 1;
+    f = - 1.5;
+    b = ! true;
+
+}

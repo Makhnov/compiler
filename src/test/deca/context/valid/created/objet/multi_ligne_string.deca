@@ -1,0 +1,12 @@
+// Description:
+//   Test les multi-ligne string
+//
+// Resultats:
+//
+// Historique:
+//    cree le 16/01/2026
+class A {
+    void poke () asm ("123
+ABC
+                   POKE");
+}

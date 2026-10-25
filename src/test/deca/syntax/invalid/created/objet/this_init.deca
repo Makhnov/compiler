@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec utilisation de this.
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//    cree le 16/01/2026
+
+class Class {
+    void m(Method) {
+        this = null;
+    }
+}

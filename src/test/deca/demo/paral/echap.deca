@@ -1,0 +1,12 @@
+// Description:
+// Test de compilation d'un println avec échappement
+//
+// Resultats:
+//   Et si on lançait le fichier : "src\hello\world.txt" ?
+//
+// Historique:
+//    cree le 20/12/2025
+
+{
+    println("Et si on lançait le fichier : \"src\\hello\\world.txt\" ?");
+}

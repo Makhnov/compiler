@@ -1,0 +1,10 @@
+
+// Resultats:
+//
+// Historique:
+class A {
+    int x;
+}
+{
+    A a = new A();
+}

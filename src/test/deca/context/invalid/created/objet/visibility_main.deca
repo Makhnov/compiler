@@ -1,0 +1,18 @@
+// Description:
+//    Test invalide d'un appel de champ protégé
+//
+// Resultats:
+//    (aucun output)
+//
+// Historique:
+//    cree le 16/01/2026
+
+
+class Class {
+    protected int var;
+}
+
+{
+    Class classe = new Class();
+    println(classe.var);
+}

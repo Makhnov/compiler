@@ -1,0 +1,41 @@
+// Description:
+//    Test des déclarations et affectations de variables (int et float).
+//    Vérifie l'allocation en pile et la récupération des valeurs.
+//
+// Resultats:
+//    a = 5
+//    b = 3.14
+//    x = 2
+//    y = 2
+//    c = 5
+//    a apres modif = 10
+//    c doit rester 5 = 5
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    // 1. Déclaration avec initialisation
+    int a = 5;
+    float b = 3.14;
+    int c; // Déclaration sans initialisation immédiate
+    int x;
+    int y;
+    x = y = 2; // Double affectation pour tester l'ordre d'évaluation
+
+    println("a = ", a);
+    println("b = ", b);
+    println("x = ", x);
+    println("y = ", y);
+
+    // 2. Affectation de variable à variable (Copie de valeur)
+    c = a; 
+    println("c = ", c);
+
+    // 3. Modification d'une variable existante
+    a = 10;
+    println("a apres modif = ", a);
+
+    // 4. Vérification que 'c' n'a pas changé (indépendance des cases mémoire)
+    println("c doit rester 5 = ", c);
+}

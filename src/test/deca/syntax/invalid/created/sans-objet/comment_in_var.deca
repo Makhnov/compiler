@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec un commentaire au milieu d'une déclaration de variable.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+
+{
+    float var/*comment*/iable = 1.5;
+}

@@ -1,0 +1,15 @@
+// Description:
+//   Test d'un programme Deca avec un type qui n'est pas déclaré;
+//   Règle (0.2) de la grammaire attribuée
+//
+// Resultats:
+//   Ligne 12 : Le type Poo n’est pas déclaré
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    Poo x;
+}
+
+

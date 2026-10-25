@@ -1,0 +1,22 @@
+// Description:
+//   Test d'un programme Deca avec des declarations valides.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+{
+    int a = b = c;
+    int a, b, c;
+    int x;
+    float b;
+    boolean c;
+    int d = 5;
+    float e = 3.14;
+    boolean f = true;
+    int g = 1, h = 2;
+    float i = 1.5, j = 2.5;
+    boolean k = true, l = false;
+}

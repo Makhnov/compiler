@@ -1,0 +1,15 @@
+// Description:
+//   Test invalide d'un programme Deca avec opérations sur des var non initialisées;
+//   Règle (3.49) de la grammaire attribuée
+//
+// Resultats:
+//   (aucun résultat)
+//
+// Historique:
+//    cree le 14/01/2026
+
+{
+    float f;
+    int i;
+    i = i + f;
+}

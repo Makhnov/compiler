@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec déclaration de var de types différents à la même ligne (invalide).
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 10/01/2026
+
+{
+    int c = 0, d = 1.5;
+}

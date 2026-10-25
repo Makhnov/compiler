@@ -1,0 +1,97 @@
+// Description:
+//    Vérifie l'ordre d'évaluation et l'absence d'optimisations
+//    invalides en présence d'effets de bord (affectations dans les expressions).
+//
+// Resultats:
+//    5
+//    3
+//    5
+//    -1
+//    3
+//    -1
+//    6
+//    3
+//    6
+//    3
+//    2
+//    2
+//    5
+//    5
+//    3
+//    6
+//    3
+//
+// Historique:
+//    créé le 12/01/2026
+
+{
+    int x;
+    int y;
+
+    // Risque : commutation interdite
+    x = 2;
+    y = x + (x = 3);
+    if (x != 3 || y != 5){println("KO"); 1/0;}
+    println(y);
+    println(x);
+
+    // Risque: quel assign est pris en compte ?
+    x = 2;
+    x = x + (x = 3);
+    println(x);
+    if (x != 5){println("KO"); 1/0;}
+
+    // cf. cas numéro 1
+    x = 2;
+    y = x - (x = 3);
+    println(y);
+    println(x);
+    if (x != 3 || y != -1){println("KO"); 1/0;}
+
+    // cf. cas numéro 2
+    x = 2;
+    x = x - (x = 3);
+    println(x);
+    if (x != -1){println("KO"); 1/0;}
+
+    // cf. cas numéro 1
+    x = 2;
+    y = x * (x = 3);
+    println(y);
+    println(x);
+    if (x != 3 || y != 6){println("KO"); 1/0;}
+
+    // cf. cas numéro 2
+    x = 2;
+    x = x * (x = 3);
+    println(x);
+    if (x != 6){println("KO"); 1/0;}
+
+    // cf. cas numéro 1
+    x = 6;
+    y = x / (x = 2);
+    println(y);
+    println(x);
+    if (x != 2 || y != 3){println("KO"); 1/0;}
+
+    // cf. cas numéro 2
+    x = 12;
+    y = x % (x = 5);
+    println(y);
+    println(x);
+    if (x != 5 || y != 2){println("KO"); 1/0;}
+
+    // cf. cas numéro 1
+    x = 0;
+    y = (x = 2) + (x = 3);
+    println(y);
+    println(x);
+    if (x != 3 || y != 5){println("KO"); 1/0;}
+
+    // cf. cas numéro 1
+    x = 0;
+    y = (x = 2) * (x = 3);
+    println(y);
+    println(x);
+    if (x != 3 || y != 6){println("KO"); 1/0;}
+}

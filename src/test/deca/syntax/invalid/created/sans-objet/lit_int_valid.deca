@@ -1,0 +1,15 @@
+// Description:
+//   Test d'un programme Deca avec des entiers valides.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 16/12/2025
+
+{
+    1;
+    15;
+    2147483647; // Max int
+    10e1;
+}

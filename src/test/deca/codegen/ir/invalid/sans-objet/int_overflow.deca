@@ -1,0 +1,19 @@
+// Description:
+//    Test du int overflow en Deca.
+//
+// Resultats:
+//    -2147483648
+//
+// Historique:
+// cree le 08/01/2026
+
+{
+    int a = 2147483647; // Valeur maximale pour un int
+    int b = 1;
+    int c = a + b; // -2147483648 car calcul en modulo 2^32
+    if (c != (-2147483647 -1)) {
+        println("KO");
+        1/0;
+    }
+    println(c);
+}

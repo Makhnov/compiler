@@ -1,0 +1,22 @@
+// Description:
+//   Test d'un programme Deca avec des commentaires.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+
+class Class /*comment*/ {
+    int /*comment*/ param; //comment
+    protected float //comment
+    param2;
+
+    void Method(int /*comment*/a, /*comment*/float/*comment*/ b, boolean //comment
+    c){
+        param /*
+        */ = 2 + //comment
+        1;
+    }
+}

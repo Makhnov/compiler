@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec de if valide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    if (x < 10) {
+        x = x + 1;
+    }
+}

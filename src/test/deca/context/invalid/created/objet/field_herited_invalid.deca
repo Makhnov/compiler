@@ -1,0 +1,17 @@
+// Description:
+//   Test invalide d'un programme Deca avec déclaration d'un champ portant le nom d'une méthode héritée
+//   Règle (2.5)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Mere {
+    void Method() {}
+}
+
+class Fille extends Mere{
+    int Method;
+}

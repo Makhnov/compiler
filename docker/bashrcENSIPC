@@ -1,0 +1,114 @@
+export PS1="\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] "
+
+get_gl_dir()
+{
+    local SOURCE_PATH="${BASH_SOURCE[0]}"
+    local SYMLINK_DIR
+    local SCRIPT_DIR
+    # Resolve symlinks recursively
+    while [ -L "$SOURCE_PATH" ]; do
+        # Get symlink directory
+        SYMLINK_DIR="$( cd -P "$( dirname "$SOURCE_PATH" )" >/dev/null 2>&1 && pwd )"
+        # Resolve symlink target (relative or absolute)
+        SOURCE_PATH="$(readlink "$SOURCE_PATH")"
+        # Check if candidate path is relative or absolute
+        if [[ $SOURCE_PATH != /* ]]; then
+            # Candidate path is relative, resolve to full path
+            SOURCE_PATH=$SYMLINK_DIR/$SOURCE_PATH
+        fi
+    done
+    # Get final script directory path from fully resolved source path
+    SCRIPT_DIR="$(cd -P "$( dirname "$SOURCE_PATH" )" >/dev/null 2>&1 && pwd)"
+    echo "$SCRIPT_DIR/.."
+}
+
+
+export GL=$(get_gl_dir)
+
+
+# export JAVA_HOME=/usr/local/jdk-23.0.2+7
+JAVA_HOME=/usr/lib/jvm/temurin-23-jdk-amd64
+PATH=$JAVA_HOME/bin:"$PATH"
+
+PATH=/matieres/4MMPGL/GL/global/bin:"$PATH"
+PATH=/usr/local/ima/bin:"$PATH"
+PATH=$GL/src/main/bin:"$PATH"
+PATH=$GL/src/test/script:"$PATH"
+PATH=$GL/src/test/script/launchers:"$PATH"
+export PATH
+
+# Trouver un (ou plusieurs) fichier(s) deca ou ass et lancer un test
+function ftest() {
+    [[ "${!#}" == -? ]] && { "$1" "${!#}"; return; }
+    if [ $# -lt 2 ]; then
+        echo "Usage: <alias> [options] <nom_du_fichier>"
+        return 1
+    fi
+
+    # Premier argument
+    local tool=$1
+    shift
+
+
+    # Dernier argument
+    # local filename="${!#}"
+
+    # Options 
+    local options=""
+    
+    #fichiers
+    local files=""
+
+    for arg in "$@"; do
+        if [[ "$arg" == -* ]]; then
+            # Option
+            options="$options $arg"
+        else
+            # Fichier
+            local filepath=$(find "$GL/src/test/" -name "$arg" | head -n 1)
+            
+            if [ -z "$filepath" ]; then
+                echo "Error: File '$arg' not found in $GL/src/test/"
+                return 1
+            fi
+            
+            # Chemin complet
+            files="$files $filepath"
+        fi
+    done
+
+    echo "Exécution de $tool $options $files"
+    $tool $options $files
+}
+
+# Aliases
+
+# Analyses lexicales et sémantiques
+alias parse='ftest test_synt'
+alias lex='ftest test_lex'
+alias sema='ftest test_context'
+
+# Compilation
+alias decac='ftest decac'
+alias exec='ftest decac'
+
+# Exécution
+alias run='ftest ima'
+
+# Performance 
+alias perf='ftest ima -s'
+
+# Affichage du fichier
+alias print='ftest cat'
+
+# Test sur un seul fichier
+alias test='function _test(){ mvn -Dstyle.color=always test-compile surefire:test -Dtest=$1 | grep "Tests run" | tail -n 1; }; _test'
+alias test-full='function _test-full(){ mvn -Dstyle.color=always test-compile surefire:test -Dtest=$1; }; _test-full'
+
+# Lancement des tests
+alias mvntreg='mvn test -Dregression'
+alias mvntall='mvn test -Dall'
+alias mvntr='mvn test -Dr'
+alias mvnto='mvn test -Do'
+alias mvntro='mvn test -Dr -Do'
+alias mvnt='mvn test'

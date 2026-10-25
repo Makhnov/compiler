@@ -1,0 +1,19 @@
+// Description:
+//   Test valide d'un programme Deca avec des déclarations de méthodes correctes
+//   Règle (2.6)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 12/01/2026
+
+class Type{}
+
+class Class1 {
+    int MethodInt(){}
+    float MethodFloat(){}
+    boolean MethodBoolean(){}
+    void MethodVoid(){}
+    Type MethodType(){}
+    Type Type(){}
+}

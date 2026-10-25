@@ -1,0 +1,6 @@
+// Resultats:
+//
+// Historique:
+class A {
+    void m() asm ("LOAD #1, R0");
+}

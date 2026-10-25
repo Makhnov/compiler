@@ -1,0 +1,10 @@
+// Resultats:
+//
+// Historique:
+class A {
+    void m1() {}
+    void m2() {
+        m1();      // Appel implicite
+        this.m1(); // Appel explicite
+    }
+}

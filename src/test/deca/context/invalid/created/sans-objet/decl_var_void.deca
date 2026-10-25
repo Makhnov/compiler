@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec une variable de type void;
+//   Règle (3.17) de la grammaire attribuée
+//
+// Resultats:
+//   La déclaration d’un type void n’est pas permise
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    void x;
+}

@@ -1,0 +1,18 @@
+// Description:
+//   Test invalide d'un programme Deca avec initialisation de variable incorrecte
+//   Règle (3.7)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 16/01/2026
+
+
+class Mere {}
+
+class Fille extends Mere{}
+
+{
+    Fille f = new Mere();
+}

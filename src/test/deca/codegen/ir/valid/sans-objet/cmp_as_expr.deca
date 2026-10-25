@@ -1,0 +1,35 @@
+// Description:
+//    Test des comparaisons utilisees comme expressions (pas dans if/while)
+//    
+//
+// Resultats:
+//    lt: true
+//    gt: false
+//    le: true
+//    ge: false
+//    eq: false
+//    ne: true
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int a = 5;
+    int b = 10;
+
+    // Comparaisons stockees dans des variables
+    boolean lt = a < b;
+    boolean gt = a > b;
+    boolean le = a <= b;
+    boolean ge = a >= b;
+    boolean eq = a == b;
+    boolean ne = a != b;
+
+    // Affichage des resultats
+    if (lt) { println("lt: true");     } else { println("lt: false"); 1/0;}
+    if (gt) { println("gt: true"); 1/0;} else { println("gt: false");     }
+    if (le) { println("le: true");     } else { println("le: false"); 1/0;}
+    if (ge) { println("ge: true"); 1/0;} else { println("ge: false");     }
+    if (eq) { println("eq: true"); 1/0;} else { println("eq: false");     }
+    if (ne) { println("ne: true");     } else { println("ne: false"); 1/0;}
+}

@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec des print(""... \n") valides   .
+//
+// Resultats:
+//   abc
+//   d
+//   e
+//   f
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    print("a", "b", "c"); // resultat attendu : abc
+    println("d", "e", "f"); // resultat attendu : def (avec saut de ligne)
+}

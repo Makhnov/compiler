@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec un identifiant deja decl
+//
+// Resultats:
+//   Ligne 12 : OK
+//
+// Historique:
+//    cree le 17/01/2025
+
+class A{
+    
+    int int(int a){
+        println(42);
+    }
+
+}

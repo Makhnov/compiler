@@ -1,0 +1,14 @@
+// Description:
+//   Test invalide d'un programme Deca avec un print d'une string sur deux lignes.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+
+{
+    print("Ligne 1
+    Ligne 2");
+}

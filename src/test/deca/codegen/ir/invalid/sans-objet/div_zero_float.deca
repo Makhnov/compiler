@@ -1,0 +1,17 @@
+// Description:
+//    Test de la division par zero en float en Deca.
+//
+// Resultats:
+//
+// Historique:
+//    cree le 08/01/2026
+
+{
+    float a = 10.0;
+    float b = 0.0;
+    float c = a / b; // Division par 0.0
+    println(c);
+
+    // Division directe par zero
+    println(10.0 / 0.0);
+}

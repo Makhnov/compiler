@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec une declaration apres une instruction (invalide).
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 16/01/2026
+
+{
+    int x;
+    (x + 1) = 2;
+}

@@ -1,0 +1,19 @@
+// Description:
+//    Test du ReadInt en Deca.
+//
+// Entrées:
+//    42
+//
+// Resultats:
+//   Entrez un entier :
+//   Vous avez entré : 42
+//
+// Historique:
+//    cree le 08/01/2026
+
+{
+    int x;
+    print("Entrez un entier : ");
+    x = readInt();
+    println("Vous avez entré : " , x);
+}   

@@ -1,0 +1,13 @@
+// Description:
+//   Appel de methode sur un non-objet
+//
+// Resultats:
+//   Erreur contextuelle
+//
+// Historique:
+//   cree le 18/01/2026
+
+{
+    int x = 5;
+    x.methode();
+}

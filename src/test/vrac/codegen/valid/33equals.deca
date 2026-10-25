@@ -1,0 +1,60 @@
+// Description:
+//    Test de références croisées.
+//
+// Resultats:
+//      T1 a.equals(a) = 1
+//      T2 a.equals(b) = 0
+//      T3 a.equals(b) alias = 1
+//      T4 oa.equals(ob) via Object = 1
+//      T5 oa.equals(ob) diff obj = 0
+//      T6 c.equals(c) = 1
+//      T7 c.equals(a) = 0
+//
+// Historique:
+//    cree le 18/01/2026
+
+class A extends Object {
+    int x;
+}
+
+class B extends A {
+    int y;
+}
+
+{
+    A a;
+    A b;
+    B c;
+    Object oa;
+    Object ob;
+
+    a = new A();
+    b = new A();
+    c = new B();
+
+    oa = a;
+    ob = a;
+
+    print("T1 a.equals(a) = ");
+    if (a.equals(a)) {println(1); } else {println(0);};
+
+    print("T2 a.equals(b) = ");
+    if (a.equals(b)) {println(1); } else {println(0);};
+
+    b = a; // alias: b et a pointent le meme objet
+    print("T3 a.equals(b) alias = ");
+    if (a.equals(b)) {println(1); } else {println(0);};
+
+    print("T4 oa.equals(ob) via Object = ");
+    if (oa.equals(ob)) {println(1); } else {println(0);};
+
+    ob = c; // autre objet
+    print("T5 oa.equals(ob) diff obj = ");
+    if (oa.equals(ob)) {println(1); } else {println(0);};
+
+    print("T6 c.equals(c) = ");
+    if (c.equals(c)) {println(1); } else {println(0);};
+
+    print("T7 c.equals(a) = ");
+    if (c.equals(a)) {println(1); } else {println(0);};
+}

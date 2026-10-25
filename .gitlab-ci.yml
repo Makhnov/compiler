@@ -1,0 +1,14 @@
+# On utilise l'image officielle fournie par M. Reignier sur le GitLab de l'école
+image: gitlab.ensimag.fr:5050/gl2026/gr5/gl25/decac-image:latest
+
+stages:
+  - test
+    
+test:
+  stage: test
+  script:
+    - mvn test
+  # artifacts:
+  #   when: always
+  #   reports:
+  #     junit: target/surefire-reports/TEST-*.xml

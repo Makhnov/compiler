@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec un échappement vide (final de chaîne).
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//    cree le 10/01/2025
+
+{
+    string s = "Ceci est une erreur \";
+}

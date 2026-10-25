@@ -1,0 +1,48 @@
+// Description:
+//  Test des class fields en Deca
+//
+// Resultats:
+//      x: 0
+//      z: 0.00000e+00
+//      a: 188
+//      b: 42
+//      a after set: 100
+//      b after set: 7
+//
+// Historique:
+//    cree le 05/01/2026
+
+class A {
+    // Déclaration
+    int x;
+    boolean y;
+    float z;
+    A cl;
+    
+    // Initialisation avec des expressions
+    int a = (24*8) - (12/4) - (9%4); // 188
+    int b = 42;
+}
+
+{
+    A a = new A();
+    if (a.x != 0 || a.y != false || a.z != 0.0 || a.cl != null || a.a != 188 || a.b != 42) {
+        println("Erreur: les champs ne sont pas initialisés par défaut");
+        1/0;
+    }
+    // Lecture
+    println("x: ",  a.x); // 0
+    println("z: ",  a.z); // 0.0
+    println("a: ",  a.a); // 188
+    println("b: ",  a.b); // 42
+
+    // Ecriture
+    a.a = 100;
+    a.b = 7;
+    if (a.a != 100 || a.b != 7) {
+        println("Erreur: les champs ne sont modifiés");
+        1/0;
+    }
+    println("a after set: ",  a.a); // 100
+    println("b after set: ",  a.b); // 7
+}

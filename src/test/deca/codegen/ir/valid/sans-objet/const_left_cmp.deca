@@ -1,0 +1,44 @@
+// Description:
+//    Test des comparaisons avec constante a gauche
+//
+// Resultats:
+//    5 == x: false
+//    5 != x: true
+//    5 < x: true
+//    5 > x: false
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int x = 10;
+
+    // Constante a gauche
+    if (5 == x) {
+        println("5 == x: true");
+        1/0;
+    } else {
+        println("5 == x: false");
+    }
+
+    if (5 != x) {
+        println("5 != x: true");
+    } else {
+        println("5 != x: false");
+        1/0;
+    }
+
+    if (5 < x) {
+        println("5 < x: true");
+    } else {
+        println("5 < x: false");
+        1/0;
+    }
+
+    if (5 > x) {
+        println("5 > x: true");
+        1/0;
+    } else {
+        println("5 > x: false");
+    }
+}

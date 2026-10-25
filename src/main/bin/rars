@@ -1,0 +1,3 @@
+#!/bin/sh
+: "${RARS_JAR:=/usr/local/rars/rars.jar}"
+exec java -jar "$RARS_JAR" "$@"

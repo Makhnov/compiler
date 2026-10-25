@@ -1,0 +1,65 @@
+// Description:
+//    Test de l'évaluation de gauche à droite
+//
+// Resultats:
+//    Court-circuit AND OK
+//    Court-circuit OR OK
+//    Court-circuit OR_2 OK
+//    Court-circuit AND_2 OK
+//    Court-circuit OR_3 OK
+//    Court-circuit AND_3 OK
+//
+// Historique:
+//    cree le 08/01/2026
+
+
+{
+    boolean b;
+    int x = 0;
+    if (false && 2/x == 0 ){
+        println("KO");
+        1/0;
+    } else {
+        println("Court-circuit AND OK");
+    }
+
+    if (true || 2/x == 0) {
+        println("Court-circuit OR OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+
+    // OR : true || (...)  => le (...) ne doit pas être évalué
+    b = true || ((1 / 0) == 0);
+    if (b) {
+        println("Court-circuit OR_2 OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+
+    // AND : false && (...) => le (...) ne doit pas être évalué
+    b = false && ((1 / 0) == 0);
+    if (b) {
+        println("KO");
+        1/0;
+    } else {
+        println("Court-circuit AND_2 OK");
+    }
+    
+    // Même test, mais directement en condition (flot de contrôle)
+    if (true || ((1 / 0) == 0)) {
+        println("Court-circuit OR_3 OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+
+    if (false && ((1 / 0) == 0)) {
+        println("KO");
+        1/0;
+    } else {
+        println("Court-circuit AND_3 OK");
+    }
+}

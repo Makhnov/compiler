@@ -1,0 +1,10 @@
+// Description:
+//   Test d'un programme Deca avec un classe mal initialisée.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+class Enfant extends {}

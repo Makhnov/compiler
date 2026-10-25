@@ -1,0 +1,7 @@
+// Resultats:
+//
+// Historique:
+class A {
+    void set(int a, float b) {
+    }
+}

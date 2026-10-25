@@ -1,0 +1,18 @@
+// Description:
+//   Test d'un programme Deca avec des expressions unaires valides.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    -a;
+    !b;
+    //c++;
+    //++d;
+    //e--;
+    //--f;
+    
+}

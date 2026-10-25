@@ -1,0 +1,17 @@
+// Description:
+//    Test de vérifcation, printlnx(a, b, c) éq à printx(a); printx(b); printx(c); printlnx();
+//
+// Resultats:
+//    10 20 30
+//
+//
+// Historique:
+//    cree le 10/01/2026
+
+{
+    int a = 10;
+    int b = 20;
+    int c = a + b;
+    printlnx(a, b, c); // equivalent a printx(a); printx(b); printx(c); printlnx();
+    printx(a);
+}

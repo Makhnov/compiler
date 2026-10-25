@@ -1,0 +1,168 @@
+#!/bin/sh
+
+# Utilisation : test_codegen <fichier.deca> <mode>
+# mode = -i pour test interactif
+# mode = (rien) pour test normal
+
+# On se place dans le répertoire du projet (quel que soit le
+# répertoire d'où est lancé le script) :
+cd "$(dirname "$0")"/../../../.. || exit 1
+. ./src/test/script/tools/common.sh
+
+# PATH=./src/test/script/launchers:"$PATH"
+
+PATH=./src/main/bin:"$PATH"
+
+# Gestion des options
+register_option=0
+interactive_option=1
+o_option=""
+
+for arg in "$@"; do
+    if [ "$arg" = "-o" ]; then
+        # On ajoute "-o" à la chaîne existante (avec un espace avant)
+        if [ -z "$o_option" ] ; then
+            o_option="-n -o"
+        else
+            o_option="$o_option -o"
+        fi
+    fi
+    if [ "$arg" = "-r" ]; then
+        register_option=1
+    fi
+    if [ "$arg" = "-i" ]; then
+        interactive_option=1
+    fi
+    if [ "$arg" = "-h" ]; then
+        echo "Usage: $0 <fichier.deca> [-o*] [-r] [-i]"
+        echo "  -o* : active les optimisations (plusieurs -o possibles)"
+        echo "  -r : teste avec différents nombres de registres (4, 8, 16)"
+        echo "  -i : mode interactif (avec entrées utilisateur)"
+        echo "  Sans argument : lance les tests avec 16 registres et sans optimisation, sur la partie objet et sans objet"
+        exit 0
+    fi
+done
+
+# On récupère le chemin absolu du fichier .deca AVANT de faire le cd
+# Cela permet de lancer le script de n'importe où
+if [ "${1#/}" = "$1" ]; then
+    # Si le chemin ne commence pas par /, il est relatif -> on ajoute le pwd
+    fichier_test="$(pwd)/$1"
+else
+    # Sinon il est déjà absolu
+    fichier_test="$1"
+fi
+fichier_ass="${fichier_test%.deca}.ass"
+fichier_res="${fichier_test%.deca}.res"
+
+# Fonction pour tester un fichier spécifique
+# Usage: run_test_case <nb_registres> <fichier_deca>
+run_test_case() {
+    r="$1"
+    optimisation="$2"
+
+    # 1. Compilation
+    # On test sur la liste de registre (si l'option -r est activée)
+
+    if ! decac "$optimisation" -r "$r" "$fichier_test" 2>&1; 
+    then
+        log_error " Erreur compilation (decac) : $(basename "$fichier_test")${COLOR_RESET}"
+        echo "commande lancé :"
+        echo "decac $optimisation -r $r $fichier_test"
+        rm -f "$fichier_ass" "$fichier_res"
+        return 1
+    fi
+
+    # 2. Exécution IMA
+    ima "$fichier_ass" > "$fichier_res"
+
+    # 3. Extraction 
+    sortie_attendue=$(sed -n '/Resultats:/,/Historique:/ { /Resultats:/d; /Historique:/d; s|//||; p; }' "$fichier_test" | xargs)
+    sortie_obtenue=$(cat "$fichier_res" | tr -d '"' | xargs)
+    echo sortie_attendue="$sortie_attendue"
+    echo sortie_obtenue="$sortie_obtenue"
+    # 4. Comparaison
+    if [ "$sortie_attendue" = "$sortie_obtenue" ]; then
+        echo "${GREEN}Test réussi : $(basename "$fichier_test")${COLOR_RESET}"
+        rm -f "$fichier_ass" "$fichier_res" 
+        return 0
+    else
+        echo "${RED}Test échoué : $(basename "$fichier_test")${COLOR_RESET}"
+        echo "   Attendu : $sortie_attendue"
+        echo "   Obtenu  : $sortie_obtenue"
+        rm -f "$fichier_ass" "$fichier_res"
+        return 1
+    fi
+}
+
+run_test_case_interactive() {
+    r="$1"
+    optimisation="$2"
+
+    # 1. Compilation
+    # On redirige la sortie (stdout/stderr) pour ne pas polluer l'écran sauf si erreur critique
+    if ! decac -r "$r" "$fichier_test" 2>&1; 
+    then
+        echo "${RED} Erreur compilation (decac) : $(basename "$fichier_test")${COLOR_RESET}"
+        rm -f "$fichier_ass" "$fichier_res"
+        return 1
+    fi
+
+    # 3. On récupère les entrées
+    entree=$(sed -n '/Entrées:/,/Resultats:/ { /Entrées:/d; /Resultats:/d; s|//||; p; }' "$fichier_test" | xargs)
+    echo "Entrée utilisée : $entree"
+
+    # Intermediaire, on vérifie que RX (avec X le nombre de registres) fonctionne
+    if grep -q "R$((r + 1))" "$fichier_test"; then
+        log_error " Erreur: $fichier_ass contient R$((r + 1))${COLOR_RESET}"
+        rm -f "$fichier_ass" "$fichier_res"
+        return 1
+    fi
+
+    # 4. On exécute ima en lui passant les entrées
+    if [ -n "$entree" ]; then
+        echo "$entree" | ima "$fichier_ass" > "$fichier_res"
+    else
+        ima "$fichier_ass" > "$fichier_res"
+    fi
+
+    # 5. Extraction 
+    sortie_attendue=$(sed -n '/Resultats:/,/Historique:/ { /Resultats:/d; /Historique:/d; s|//||; p; }' "$fichier_test" | xargs)
+    sortie_obtenue=$(cat "$fichier_res" | tr -d '"' | xargs)
+    echo sortie_attendue="$sortie_attendue"
+    echo sortie_obtenue="$sortie_obtenue"
+    # 6. Comparaison
+    if [ "$sortie_attendue" = "$sortie_obtenue" ]; then
+        echo "${GREEN}Test réussi : $(basename "$fichier_test")${COLOR_RESET}"
+        rm -f "$fichier_ass" "$fichier_res" 
+        return 0
+    else
+        echo "${RED}Test échoué : $(basename "$fichier_test")${COLOR_RESET}"
+        echo "   Attendu : $sortie_attendue"
+        echo "   Obtenu  : $sortie_obtenue"
+        rm -f "$fichier_ass" "$fichier_res"
+        return 1
+    fi
+}
+
+# Lancement des tests
+if [ "$interactive_option" -eq 1 ]; then
+    
+    if [ "$register_option" -eq 0 ]; then
+        run_test_case_interactive "16" "$o_option"
+    else
+        for reg in 4 8 16; do
+            log_info "---- Test avec $reg registres ----"
+            run_test_case_interactive "$reg" "$o_option"
+        done
+    fi
+else
+    if [ "$register_option" -eq 0 ]; then
+        run_test_case "16" "$o_option"
+    else
+        for reg in 4 8 16; do
+            log_info "---- Test avec $reg registres ----"
+            run_test_case "$reg" "$o_option"
+        done
+    fi
+fi

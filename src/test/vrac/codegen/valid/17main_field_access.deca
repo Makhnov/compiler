@@ -1,0 +1,12 @@
+// Resultats:
+//    10
+//
+// Historique:
+class A {
+    int x;
+}
+{
+    A a = new A();
+    a.x = 10;
+    println(a.x);
+}

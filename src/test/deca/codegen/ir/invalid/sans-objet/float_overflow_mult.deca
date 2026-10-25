@@ -1,0 +1,14 @@
+// Description:
+//    Test du float overflow en Deca.
+//
+// Resultats:
+//
+// Historique:
+// cree le 08/01/2026
+
+{
+    float a = 3.4e+38; // Valeur maximale pour un float
+    float b = 1.0e+38;
+    float c = a * b; // Dépassement de float
+    println(c);
+}

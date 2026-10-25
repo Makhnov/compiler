@@ -1,0 +1,9 @@
+// Resultats:
+//
+// Historique:
+class A {
+    float f;
+    boolean b;
+    float f_init = 3.14;
+    boolean b_init = true;
+}

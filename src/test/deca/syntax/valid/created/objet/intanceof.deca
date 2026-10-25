@@ -1,0 +1,18 @@
+// Description:
+//   Test instanceof en Deca.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+class MyClass {
+}
+
+{
+    MyClass a;
+    MyClass b;
+    a instanceof MyClass;
+    b instanceof MyClass;
+    a instanceof MyClass && b instanceof MyClass;
+}

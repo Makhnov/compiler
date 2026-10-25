@@ -1,0 +1,14 @@
+// Description:
+//   Test invalide d'un programme Deca avec déclaration de champ incorrecte
+//   Règle (2.4)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 12/01/2026
+
+
+class Classe {
+    int c = 0, d = 1.5;
+}

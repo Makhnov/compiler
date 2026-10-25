@@ -1,0 +1,25 @@
+// Description:
+//    Test d'héritage partiel. C redéfinit m, B hérite de A.
+//    (Modifié pour retourner int au lieu d'afficher).
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2026
+
+class A { int m() { return 1; } }
+class B extends A { } 
+class C extends B { int m() { return 2; } }
+{
+    B b = new B();
+    B c = new C();
+    
+    // b.m() -> 1 (A), c.m() -> 2 (C)
+    if (b.m() == 1 && c.m() == 2) {
+        println("OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+}

@@ -1,0 +1,9 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int x;
+    void setX(int x) {
+        this.x = x; // 'x' est le paramètre, 'this.x' est le champ
+    }
+}

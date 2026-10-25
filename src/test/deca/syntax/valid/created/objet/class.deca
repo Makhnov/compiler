@@ -1,0 +1,21 @@
+// Description:
+//   Test d'un programme Deca avec la déclaration d'une classe valide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+
+class MyClass {
+    int myField;
+    
+    void myMethod() {
+        myField = 10;
+    }
+}
+{
+    MyClass obj;
+    obj = new MyClass();
+    obj.myMethod();
+}

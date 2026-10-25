@@ -1,0 +1,12 @@
+// Description:
+//    Test du print de booléen (ne fonctionne pas).
+//
+// Resultats:
+//
+// Historique:
+//    cree le 08/01/2026
+
+{
+    boolean b = true;
+    println(b); // Devrait provoquer une erreur car le print de booléen n'est pas supporté
+}

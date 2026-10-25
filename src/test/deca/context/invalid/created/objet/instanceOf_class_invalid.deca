@@ -1,0 +1,15 @@
+// Description:
+//   Test invalide d'instanceof
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 17/01/2026
+
+class A{}
+class B extends A{}
+{
+	if (B instanceof A){}
+}
+

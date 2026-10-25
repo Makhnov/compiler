@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec un interger invalide (trop grand);
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+{
+    int x = 2147483648; // Overflow entier trop grand ((2^31 - 1) + 1)
+}

@@ -1,0 +1,50 @@
+// Description:
+//    Test des optimisations in-place avec floats (couvre les branches isFloat)
+//
+// Resultats:
+//    x: 10.5
+//    y: 5.0
+//    z: 200.0
+//    w: 2.0
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    float x = 0.0;
+    float y = 10.0;
+    float z = 2.0;
+    float w = 16.0;
+
+    // x = x + constant (codeGenInPlace de Plus sur float)
+    x = x + 1.0;
+    x = x + 2.0;
+    x = x + 3.0;
+    x = x + 4.0;
+    x = x + 0.5;
+
+    // y = y - constant (codeGenInPlace de Minus sur float)
+    y = y - 1.0;
+    y = y - 2.0;
+    y = y - 2.0;
+
+    // z = z * constant (codeGenInPlace de Multiply sur float)
+    z = z * 2.0;
+    z = z * 5.0;
+    // constante a gauche (commutativite, teste rhsIsDest)
+    z = 2.0 * z;
+    z = 5.0 * z;
+
+    // w = w / constant (codeGenInPlace de Divide sur float)
+    w = w / 2.0;
+    w = w / 4.0;
+
+    if (x != 10.5 || y != 5.0 || z != 200.0 || w != 2.0) {
+        println("KO");
+        1/0;
+    }
+    println("x: ", x);
+    println("y: ", y);
+    println("z: ", z);
+    println("w: ", w);
+}

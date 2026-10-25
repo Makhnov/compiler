@@ -1,0 +1,29 @@
+// Description:
+//   Test d'un programme Deca avec des lvalue valides.
+//
+// Resultats:
+//
+// Historique:
+//    cree le 16/01/2026
+
+class Class {
+    int x;
+}
+
+class A {
+    int x1;
+}
+
+class B {
+    A x2;
+}
+
+{
+    Class classe = new Class();
+    B b = new B();
+    
+    classe.x = 1;
+    
+    b.x2 = new A();
+    b.x2.x1 = 1;  
+}

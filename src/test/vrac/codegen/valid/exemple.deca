@@ -1,0 +1,24 @@
+// Resultats:
+// a.getX() = 1
+//
+// Historique:
+// 10/01/2026
+
+class A {
+    protected int x ;
+
+    int getX() {
+        return x ;
+    }
+
+    void setX(int x) {
+        this.x = x ;
+    }
+}
+
+{
+    A a = new A() ;
+    a.setX(1) ;
+
+    println("a.getX() = ", a.getX()) ;
+}

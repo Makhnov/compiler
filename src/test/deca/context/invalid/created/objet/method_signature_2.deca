@@ -1,0 +1,19 @@
+// Description:
+//   Test invalide d'un programme Deca avec signature de méthode incorrecte
+//   Règle (2.7)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Type{}
+
+class Mere {
+    void Method(Type var){}
+}
+
+class Fille extends Mere{
+    void Method(){}
+}

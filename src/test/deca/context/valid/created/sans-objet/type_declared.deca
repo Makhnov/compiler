@@ -1,0 +1,15 @@
+// Description:
+//   Test d'un programme Deca avec un type déclaré;
+//   Règle (0.2) de la grammaire attribuée
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    int a;
+    float b;
+    boolean c;
+}

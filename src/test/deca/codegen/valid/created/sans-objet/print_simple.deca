@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un print simple en Deca
+//
+// Resultats:
+//  Hello, World!
+//  10
+//  4.20000e+01
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    println("Hello, World!");
+    println(10);
+    println(42.0);
+}

@@ -1,0 +1,152 @@
+// Description:
+//    Mini-jeux inspirer de Cookie Clicker
+//
+// Historique:
+//    cree le 18/01/2026
+class IO{
+    int getOption(){
+        int opt = readInt();
+        while (opt<0 || opt>4){
+            opt = readInt();
+        }
+        return opt;
+    }
+    void clear(){
+        int n = 50;
+        while (n>0){
+            println();
+            n = n -1;
+        }
+    }
+    void printCookie(){
+        this.clear();
+        println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠚⣉⡙⠲⠦⠤⠤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        println("⠀⠀⠀⠀⠀⠀⢀⣴⠛⠉⠉⠀⣾⣷⣿⡆⠀⠀⠀⠐⠛⠿⢟⡲⢦⡀⠀⠀⠀⠀");
+        println("⠀⠀⠀⠀⣠⢞⣭⠎⠀⠀⠀⠀⠘⠛⠛⠀⠀⢀⡀⠀⠀⠀⠀⠈⠓⠿⣄⠀⠀⠀");
+        println("⠀⠀⠀⡜⣱⠋⠀⠀⣠⣤⢄⠀⠀⠀⠀⠀⠀⣿⡟⣆⠀⠀⠀⠀⠀⠀⠻⢷⡄⠀");
+        println("⠀⢀⣜⠜⠁⠀⠀⠀⢿⣿⣷⣵⠀⠀⠀⠀⠀⠿⠿⠿⠀⠀⣴⣶⣦⡀⠀⠰⣹⡆");
+        println("⢀⡞⠆⠀⣀⡀⠀⠀⠘⠛⠉⠁⠀GL25 ⠀⠀⠀⠀⠀⢿⣿⣶⠇⠀⢠⢻⡇");
+        println("⢸⠃⠘⣾⣏⡇⠀⠀⠀⠀⠀⠀⠀2026 ⠀⠀⠀⣠⣤⣤⡉⠁⠀⠀⠈⠫⣧");
+        println("⡸⡄⠀⠘⠟⠀⠀⠀⠀⠀⠀⣰⣿⣟⢧⠀⠀⠀⠀⠰⡿⣿⣿⢿⠀⠀⣰⣷⢡⢸");
+        println("⣿⡇⠀⠀⠀⣰⣿⡻⡆⠀⠀⠻⣿⣿⣟⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠘⢿⡿⣸⡞");
+        println("⠹⣽⣤⣤⣤⣹⣿⡿⠇⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⣽⠀");
+        println("⠀⠙⢻⡙⠟⣹⠟⢷⣶⣄⢀⣴⣶⣄⠀⠀⠀⠀⠀⢀⣤⡦⣄⠀⠀⢠⣾⢸⠏⠀");
+        println("⠀⠀⠘⠀⠀⠀⠀⠀⠈⢷⢼⣿⡿⡽⠀⠀⠀⠀⠀⠸⣿⣿⣾⠀⣼⡿⣣⠟⠀⠀");
+        println("⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⣆⠑⠋⠀⢀⣀⠀⠀⠀⠀⠈⠈⢁⣴⢫⡿⠁⠀⠀⠀");
+        println("⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⣧⣄⡄⠴⣿⣶⣿⢀⣤⠶⣞⣋⣩⣵⠏⠀⠀⠀⠀⠀");
+        println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢺⣿⢯⣭⣭⣯⣯⣥⡵⠿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀");
+        println();
+    }
+}
+
+class Item{
+    int level = 0;
+    int price;
+
+    void init(int price){
+        this.price = price;
+    }
+
+    void updatePrice() {
+        price = (price*11)/10+1;
+    }
+}
+
+class Tools extends Item{
+    // nombre de cookie gen avec l'option 1
+    int cookingSkill = 1;
+
+    void upgrade(){
+        level = level +1;
+        cookingSkill = cookingSkill +1;
+        updatePrice();
+    }
+}
+
+class Furnace extends Item{
+    void upgrade(){
+        level = level +1;
+        updatePrice();
+    }
+}
+
+class Manager extends Item{
+    void upgrade(){
+        level = level +1;
+    }
+}
+
+{
+    int cookie = 0;
+    int turns = 42;
+
+    IO io = new IO();
+
+    Tools tools = new Tools();
+    Furnace furnace = new Furnace();
+    Manager manager = new Manager();
+
+    int totalSalary = 0;
+    int totalProd = 0;
+
+    int option = 0;
+    
+    tools.init(4);
+    furnace.init(5);
+    manager.init(3);
+    
+    while (turns > 0) {
+
+        io.clear();
+        io.printCookie();
+        
+        println("Remaining turns : ", turns);
+        println("Cookies : ", cookie);
+
+        println("Cookie Production : ", totalProd);
+        println("Salary Cost : ", totalSalary);
+        
+        println("[1] Bake ",tools.cookingSkill," cookies");
+        println("[2](",tools.level,") Upgrade your cooking skills for ",tools.price," cookies");
+        println("[3](",furnace.level,") Buy a Cooking robot for ",furnace.price,", each cook 1 cookie per turn");
+        println("[4](",manager.level,") Hire a manager for ",manager.price," per turn, each add 30% efficiency to robots");
+
+        option = io.getOption();
+
+        if (option == 1) {
+            cookie = cookie + tools.cookingSkill;
+        }
+        if (option == 2) {
+            cookie = cookie - tools.price;
+            tools.upgrade();
+        }
+        if (option == 3) {
+            cookie = cookie - furnace.price;
+            furnace.upgrade();
+        }
+        if (option == 4) {
+            manager.upgrade();
+        }
+        totalProd = (furnace.level*(100+30*manager.level))/100;
+        totalSalary = manager.level*manager.price;
+
+        cookie = cookie + totalProd - totalSalary;
+
+        turns = turns -1;
+
+        // mecaniquie dendettement au taux de 50%
+        if (cookie < 0) {
+            cookie = cookie + cookie/2;
+        }
+    }
+
+    io.printCookie();
+
+    if (cookie < 0) {
+        println("You have fallen into the debt trap");
+        println("You owe ", -cookie ," cookie to the bank");
+    } else {
+        println("Congratulations, you managed to accumulate ", cookie ," during this game.");
+    }
+
+}   

@@ -1,0 +1,46 @@
+// Description:
+//    Test de l'heritage de methodes entre classes en Deca.
+//
+// Resultats:
+//    Hello from Parent
+//    Hello from Child
+//    This is a method from Parent class
+//    Hello from Child
+//
+// Historique:
+//    cree le 06/01/2026
+
+class Parent {
+    void parentMethod() {
+        println("This is a method from Parent class");
+    }
+    void sayHello() {
+        println("Hello from Parent"); 
+    }
+}
+
+
+class Child extends Parent {
+    // Redefinition de la methode sayHello
+    void sayHello() {
+        println("Hello from Child"); 
+    }
+}
+
+{
+    Parent p = new Parent();
+    Child c = new Child();
+    Parent pc = new Child();
+
+    // Appel de la methode sur l'objet Parent
+    p.sayHello(); // Doit afficher "Hello from Parent"
+
+    // Appel de la methode sur l'objet Child
+    c.sayHello(); // Doit afficher "Hello from Child"
+
+    // Appel de la methode hereditee depuis Child
+    c.parentMethod(); // Doit afficher "This is a method from Parent class"
+
+    // Appel de la methode hereditee depuis Parent
+    pc.sayHello(); // Doit afficher "Hello from Child" grace au polymorphisme
+}

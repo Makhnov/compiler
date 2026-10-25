@@ -1,0 +1,19 @@
+// Description:
+//    Test avec un include redondant qui fonctionne.
+//
+// Resultats:
+//    10
+//
+// Historique:
+//    cree le 12/01/2026
+
+
+{
+    int x = 360;
+    int y = 6;
+
+    #include "bis.decah"
+    #include "bis.decah"
+
+    println(x);
+}

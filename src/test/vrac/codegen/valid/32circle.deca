@@ -1,0 +1,25 @@
+// Description:
+//    Test de références croisées.
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2026
+
+class A { B b; void setB(B other) { b = other; } }
+class B { A a; void setA(A other) { a = other; } }
+{
+    A a = new A();
+    B b = new B();
+    a.setB(b);
+    b.setA(a);
+    
+    // a.b pointe sur b, et b.a pointe sur a
+    if (a.b.a == a) {
+        println("OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+}

@@ -1,0 +1,19 @@
+// Description:
+//    Test de la stack overflow en Deca.
+//
+// Resultats:
+//
+// Historique:
+//    cree le 06/01/2026
+
+class InfiniteRecursion {
+    void recurse() {
+        // Appel recursif sans condition d'arret
+        this.recurse();
+    }
+}
+
+{
+    InfiniteRecursion ir = new InfiniteRecursion();
+    ir.recurse(); // Devrait provoquer un debordement de pile (stack overflow)
+}

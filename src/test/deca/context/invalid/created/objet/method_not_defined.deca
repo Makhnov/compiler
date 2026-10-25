@@ -1,0 +1,17 @@
+// Description:
+//   Appel d'une methode non definie
+//
+// Resultats:
+//   Erreur contextuelle
+//
+// Historique:
+//   cree le 18/01/2026
+
+class MaClasse {
+    int champ;
+}
+
+{
+    MaClasse obj = new MaClasse();
+    obj.methodeInexistante();
+}

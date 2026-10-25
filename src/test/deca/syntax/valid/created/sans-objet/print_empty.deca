@@ -1,0 +1,11 @@
+// Description:
+//   Test d'un programme Deca avec print().
+//
+// Resultats:
+// 
+// Historique:
+//    cree le 18/12/2025
+
+{
+    print();
+}

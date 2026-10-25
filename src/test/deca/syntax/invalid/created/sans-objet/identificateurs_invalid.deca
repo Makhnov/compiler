@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec des identificateurs invalides.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+{
+    int 1a;
+}

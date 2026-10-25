@@ -1,0 +1,18 @@
+// Description:
+//   Test d'un programme Deca avec opérations unaires.
+//   Règle (3.37) de la grammaire attribuée
+//
+// Resultats:
+//
+// Historique:
+//    cree le 15/01/2026
+
+{
+    boolean b = !true;
+    int x = -5;
+    float f = (float) (x);
+
+    if (! (x < 0)) {
+        println("ok");
+    }
+}

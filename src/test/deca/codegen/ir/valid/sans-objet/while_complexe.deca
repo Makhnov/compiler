@@ -1,0 +1,50 @@
+// Description:
+//   Test du while imbriqué en Deca
+//
+// Resultats:
+//    Debut du test While Imbrique
+//    Exterieur i = 0
+//     - Interieur j = 0 (i+j = 0)
+//     - Interieur j = 1 (i+j = 1)
+//     - Interieur j = 2 (i+j = 2)
+//    Exterieur i = 1
+//     - Interieur j = 0 (i+j = 1)
+//     - Interieur j = 1 (i+j = 2)
+//     - Interieur j = 2 (i+j = 3)
+//    Fin du test While Imbrique
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    int i = 0;
+    int j;
+    float y = 1;
+
+    y = y + i;
+    y = i + y;
+
+    println("Debut du test While Imbrique");
+
+    // Boucle Externe : tourne 2 fois (i=0, i=1)
+    while (i < 2) {
+        println("Exterieur i = ", i);
+        
+        j = 0; // Réinitialisation importante pour la boucle interne
+        
+        // Boucle Interne : tourne 3 fois (j=0, j=1, j=2)
+        while (j < 3) {
+            print(" - Interieur j = ", j);
+            println(" (i+j = ", i+j, ")");
+            j = j + 1;
+        }
+
+        i = i + 1;
+    }
+
+    if (i != 2 || j != 3){
+        println("KO");
+        1/0;
+    }
+    println("Fin du test While Imbrique");
+}

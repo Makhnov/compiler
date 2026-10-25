@@ -1,0 +1,30 @@
+// Description:
+//    Tests complets de l'opérateur instanceof.
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2026
+
+class A {}
+class B extends A {}
+class C extends B {}
+{
+    A a = new A();
+    A b = new B();
+    A c = new C();
+    A n = null;
+
+    boolean t1 = (a instanceof B); // False
+    boolean t2 = (b instanceof A); // True
+    boolean t3 = (c instanceof A); // True
+    boolean t4 = (n instanceof A); // False
+
+    if (!t1 && t2 && t3 && !t4) {
+        println("OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+}

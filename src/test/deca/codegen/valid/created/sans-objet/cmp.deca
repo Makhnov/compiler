@@ -1,0 +1,20 @@
+// Description:
+//   Test du while en deca
+//
+// Resultats:
+//    0
+//
+// Historique:
+//    cree le 09/01/2026
+
+{
+    int a = 5;
+    while (a != 0) {
+        a = a - 1;
+    }
+    println(a);
+    if (a != 0) {
+        println("KO");
+        1/0;
+    }
+}

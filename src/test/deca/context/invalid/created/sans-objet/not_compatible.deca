@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec deux types incompatibles;
+//   Règle (3.32) de la grammaire attribuée
+//
+// Resultats:
+//   Ligne 13 : Impossible d’affecter int et boolean
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    int x ;
+    x = true; 
+}

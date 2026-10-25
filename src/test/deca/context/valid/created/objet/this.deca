@@ -1,0 +1,29 @@
+// Description:
+//   Test d'un programme Deca avec utilisation de this.
+//   Règle (3.43) de la grammaire attribuée
+//
+// Resultats:
+//
+// Historique:
+//    cree le 16/01/2026
+
+class Type{}
+
+class Class{
+    int i;
+    float f;
+    boolean b;
+    Type t;
+
+    void Method1(int i, float f, boolean b, Type t){
+        this.i = i;
+        this.f = f;
+        this.b = b;
+        this.t = t;
+    }
+
+    void Method2(int i){
+        i = 1;
+        this.i = i;
+    }
+}

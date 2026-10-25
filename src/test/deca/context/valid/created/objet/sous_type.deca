@@ -1,0 +1,19 @@
+// Description:
+//   Test valide d'un programme Deca avec héritage de classe
+//   Règles (3.28)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Mere {}
+
+class Fille extends Mere {}
+
+{
+    Mere mere1;
+    Fille fille = new Fille();
+    Mere mere2 = new Fille();
+    mere1 = fille;
+}

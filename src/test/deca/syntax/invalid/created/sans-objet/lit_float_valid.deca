@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec des flottants valides.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 16/12/2025
+
+{
+    1.156;
+    .5;
+    1.;
+    10.2;
+    0.5e-1;
+}

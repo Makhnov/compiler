@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec erreur de division;
+//   Règle (3.49) de la grammaire attribuée
+//
+// Resultats:
+//   division entre un int et un booléen impossible
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    float f;
+    int a = 1;
+    boolean b = true;
+    f = a / b;  // int / boolean n'est pas possible
+}

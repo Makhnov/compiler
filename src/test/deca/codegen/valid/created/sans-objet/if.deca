@@ -1,0 +1,130 @@
+// Description:
+//    Test complet de la structure conditionnelle If-Then-Else.
+//    Couvre les cas Vrai/Faux, l'absence de Else, et l'imbrication.
+//
+// Resultats:
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//
+// Historique:
+//    cree le 06/01/2026
+
+{
+    int x = 10;
+    int y = 0;
+    int u = 1;
+    int v = 2;
+
+    // CAS 1 : If Simple (Condition Vraie)
+    if (x == 10) {
+        println("OK");
+    }
+
+    // CAS 2 : If Simple (Condition Fausse, else vide)
+    if (x == 0) {
+        println("ECHEC : Ce message ne doit pas s'afficher (Cas 2)");
+        1/0;
+    } else {
+    }
+    println("OK");
+
+    // CAS 3 : If / Else
+    if (x < 5) {
+        println("ECHEC : Condition fausse (x < 5) executee");
+        1/0;
+    } else {
+        println("OK");
+    }
+
+    // CAS 4 : Imbrication (If dans Else)    
+    if (x == 0) {
+        println("ECHEC : x n'est pas 0");
+        1/0;
+    } else {
+        println("OK");
+       
+        // Imbrication
+        if (y == 0) {
+           println("OK");
+        } else {
+            println("ECHEC : y est bien egal a 0");
+            1/0;
+        }
+        println("OK");
+    }
+
+    // CAS 5 : Imbrication (If dans If)
+    if (x == 10) {
+        println("OK");
+        
+        // Imbrication
+        if (y == 0) {
+            println("OK");
+        } else {
+            println("ECHEC : y est bien egal a 0");
+            1/0;
+        }
+        println("OK");
+    } else {
+        println("ECHEC : x est bien egal a 10");
+        1/0;
+    }
+
+    // CAS 6 : If Else if Simple (Condition Fausse, else vide)
+    if (x == 0) {
+        println("ECHEC : Ce message ne doit pas s'afficher (Cas 6)");
+        1/0;
+    } else if (x == 0) {
+        println("ECHEC : Ce message ne doit pas s'afficher (Cas 6)");
+        1/0;
+    } else {   
+        println("OK"); 
+    }
+
+    // CAS 7 : If Else if
+    if (x == 0) {
+        println("ECHEC : Ce message ne doit pas s'afficher (Cas 7)");
+        1/0;
+    } else if (x == 10) {
+        println("OK");
+    }
+
+    // CAS 5 : Imbrication (If dans If)
+    if (x == 10) {
+        println("OK");
+        
+        // Imbrication
+        if (y == 0) {
+            println("OK");
+        } else if (y != 0) {
+            println("ECHEC : y est bien egal a 0");
+            1/0;
+        }
+        println("OK");
+    } else {
+        println("ECHEC : x est bien egal a 10");
+        1/0;
+    }
+
+    if ((x + 1) != y) {
+        println("OK");
+    }
+
+    if (((x + 1) != y) || (x == 100)) {
+        println("OK");
+    }
+}

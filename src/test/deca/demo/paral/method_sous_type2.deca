@@ -1,0 +1,41 @@
+// Description:
+//   Test valide d'un programme Deca avec appeel de méthodes héritées
+//   Règle (2.7)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 16/01/2026
+
+
+
+class Type0{}
+
+class Type1 extends Type0{}
+
+class Type2 extends Type1{}
+
+class GrandMere {
+    int x;
+    void MethodGM(int var) {
+        this.x = var;
+    }
+    Type0 MethodType(){}
+}
+class Mere extends GrandMere {
+    int y;
+}
+class Fille extends Mere {
+    int z;
+    void MethodF() {
+        MethodGM(1);
+        this.y = 2;
+        this.z = 3;
+    }
+    Type2 MethodType(){}
+}
+
+{
+    Fille f = new Fille();
+    f.MethodF();
+}

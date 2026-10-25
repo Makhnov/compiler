@@ -1,0 +1,35 @@
+// Description:
+//    Test constant folding pour toutes les operations arithmetiques
+//
+// Resultats:
+//    4.00000e+00
+//    3.00000e+00
+//    6.25000e+00
+//    2.50000e+00
+//    2
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    // Plus float
+    float a = 1.5 + 2.5;
+
+    // Minus float
+    float b = 5.5 - 2.5;
+
+    // Multiply float
+    float c = 2.5 * 2.5;
+
+    // Divide float
+    float d = 10.0 / 4.0;
+
+    // Modulo int
+    int e = 17 % 5;
+    println(a);
+    println(b);
+    println(c);
+    println(d);
+    println(e);
+
+}

@@ -1,0 +1,11 @@
+// Description:
+//    Tests de programme lexicalement correct avec des mots-clés Deca.
+//
+// Resultats:
+//    (aucun output)
+// Historique:
+//    cree le 16/12/2025
+
+{
+    < > = + - * / % . , ( ) { } ! ; == != >= <= && || ;
+}

@@ -1,0 +1,7 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int x;
+    int y = 10;
+}

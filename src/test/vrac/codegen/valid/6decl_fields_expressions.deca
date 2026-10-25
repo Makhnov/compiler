@@ -1,0 +1,8 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int x = 3;
+    int y = x + 2; // Utilisation d'un identifiant déjà déclaré
+    boolean b = true && false;
+}

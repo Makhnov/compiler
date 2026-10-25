@@ -1,0 +1,14 @@
+// Resultats:
+//    OK
+//
+// Historique:
+class A {
+    int get() { return 1; }
+}
+class B extends A {
+    int get() { return 2; } // Même signature, redéfinition
+}
+{
+    B b = new B();
+    if (b.get() == 2) { println("OK"); }
+}

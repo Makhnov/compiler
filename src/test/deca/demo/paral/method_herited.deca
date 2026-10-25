@@ -1,0 +1,54 @@
+// Description:
+//   Test valide d'un programme Deca avec redéfinition de méthodes héritées
+//   Règle (2.7)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Type {}
+
+class Mere {
+    int MethodInt(){}
+    float MethodFloat(){}
+    boolean MethodBoolean(){}
+    void MethodVoid(){}
+    Type MethodType(){}
+}
+
+class Fille extends Mere{
+    int MethodInt(){
+        //redéfinition
+    }
+    float MethodFloat(){
+        //redéfinition
+    }
+    boolean MethodBoolean(){
+        //redéfinition
+    }
+    void MethodVoid(){
+        //redéfinition
+    }
+    Type MethodType(){
+        //redéfinition
+    }
+}
+
+// Rédéfinition de méthode
+
+class A {}
+
+class B extends A {}
+
+class C {
+    A Method() {}
+}
+
+class D extends C {
+    B Method() {}
+}
+
+
+
+

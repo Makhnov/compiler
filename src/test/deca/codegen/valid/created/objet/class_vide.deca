@@ -1,0 +1,17 @@
+// Description:
+//   Test de la création d'une classe vide en Deca
+//
+// Resultats:
+// 
+//
+// Historique:
+//    cree le 06/01/2026
+
+class EmptyClass {
+    // Classe vide sans champs ni méthodes
+}
+
+{
+    EmptyClass ec = new EmptyClass();
+    // On ne fait rien avec 'ec' pour tester la création d'une classe vide.
+}

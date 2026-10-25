@@ -1,0 +1,35 @@
+// Description:
+//    Test d'une méthode qui retourne l'objet courant pour chaînage.
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2026
+
+class Adder {
+    int val = 0;
+
+    Adder add(int x) {
+        val = val + x;
+        return this;
+    }
+
+    int getVal() {
+        return val;
+    }
+}
+
+{
+
+    Adder a = new Adder();
+    // 5 + 10 = 15
+    if(a.add(5).add(10).getVal()==15)
+    {
+        println("OK");
+    }else
+    {
+        println("KO");
+        1/0;
+    }
+}

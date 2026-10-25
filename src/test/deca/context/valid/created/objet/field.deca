@@ -1,0 +1,26 @@
+// Description:
+//   Test valide d'un programme Deca avec des déclarations de champs correctes
+//   Règle (2.4), (2.5) et (3.7)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 12/01/2026
+
+class classe {
+    int a1;
+    float b1;
+    boolean c1;
+
+    protected int d1;
+    protected float e1;
+    protected boolean f1;
+
+    int a2 = 1;
+    float b2 = 1.5;
+    boolean c2 = true;
+
+    protected int d2 = 1;
+    protected float e2 = 1.5;
+    protected boolean f2 = true;
+}

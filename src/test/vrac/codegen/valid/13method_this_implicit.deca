@@ -1,0 +1,9 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int x;
+    void setX(int val) {
+        x = val; // Doit résoudre 'x' comme le champ de A
+    }
+}

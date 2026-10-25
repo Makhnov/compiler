@@ -1,0 +1,12 @@
+// Resultats:
+//
+// Historique:
+class A {}
+class B extends A {}
+{
+    A a = new B();
+    B b = null;
+    if (a instanceof B) {
+        b = (B) (a); // Cast explicite (Downcast)
+    }
+}

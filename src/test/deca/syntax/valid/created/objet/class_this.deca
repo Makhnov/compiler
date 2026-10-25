@@ -1,0 +1,18 @@
+// Description:
+//   Test d'un programme Deca avec l'utilisation de this dans une méthode d'une classe.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 10/01/2026
+
+class Test {
+    int var;
+
+    void myMethod() {
+        this.var = 42;
+    }
+}
+{
+}

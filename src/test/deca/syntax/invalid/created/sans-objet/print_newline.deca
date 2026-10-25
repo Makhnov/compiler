@@ -1,0 +1,11 @@
+// Description:
+//   Test d'un programme Deca avec des print("... \n") invalides.
+//
+// Resultats:
+// (aucun resultat attendu)
+// Historique:
+//    cree le 18/12/2025
+
+{
+    print("Test with newline (print)\n");
+}

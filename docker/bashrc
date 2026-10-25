@@ -1,0 +1,202 @@
+export PS1="\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] "
+
+get_gl_dir()
+{
+    local SOURCE_PATH="${BASH_SOURCE[0]}"
+    local SYMLINK_DIR
+    local SCRIPT_DIR
+    # Resolve symlinks recursively
+    while [ -L "$SOURCE_PATH" ]; do
+        # Get symlink directory
+        SYMLINK_DIR="$( cd -P "$( dirname "$SOURCE_PATH" )" >/dev/null 2>&1 && pwd )"
+        # Resolve symlink target (relative or absolute)
+        SOURCE_PATH="$(readlink "$SOURCE_PATH")"
+        # Check if candidate path is relative or absolute
+        if [[ $SOURCE_PATH != /* ]]; then
+            # Candidate path is relative, resolve to full path
+            SOURCE_PATH=$SYMLINK_DIR/$SOURCE_PATH
+        fi
+    done
+    # Get final script directory path from fully resolved source path
+    SCRIPT_DIR="$(cd -P "$( dirname "$SOURCE_PATH" )" >/dev/null 2>&1 && pwd)"
+    echo "$SCRIPT_DIR/.."
+}
+
+
+export GL=$(get_gl_dir)
+
+PATH=$GL/src/main/bin:"$PATH"
+PATH=$GL/src/test/script:"$PATH"
+PATH=$GL/src/test/script/launchers:"$PATH"
+PATH=/usr/local/ima/bin:"$PATH"
+
+export QBE_OUT_EXT="${QBE_OUT_EXT:-s}"
+export JAVA_HOME=/usr/local/jdk-23.0.2+7
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH
+
+qbe_emit() {
+  local -a opts=()
+  local -a inputs=()
+
+  while (($#)); do
+    case "$1" in
+      -t)
+        opts+=("$1"); shift
+        (($#)) || { echo "Erreur: -t attend une valeur." >&2; return 1; }
+        opts+=("$1"); shift
+        ;;
+      -o)
+        echo "Erreur: ne passe pas -o à qbe_emit (il est géré automatiquement)." >&2
+        return 1
+        ;;
+      -*)
+        opts+=("$1"); shift
+        ;;
+      *)
+        inputs+=("$1"); shift
+        ;;
+    esac
+  done
+
+  ((${#inputs[@]})) || { echo "Erreur: aucun fichier en entrée." >&2; return 1; }
+
+  local in out
+  for in in "${inputs[@]}"; do
+    out="${in%.*}.${QBE_OUT_EXT}"
+    echo "Exécution de qbe ${opts[*]} -o $out $in"
+    command qbe "${opts[@]}" -o "$out" "$in" || return $?
+  done
+}
+
+__gl_default_ext() {
+  case "$1" in
+    decac|test_lex|test_synt|test_context) echo "deca" ;;
+    ima)  echo "ass" ;;
+    rars) echo "s" ;;
+    qbe|qbe_emit) echo "qbe" ;;
+    *)    echo "" ;;
+  esac
+}
+
+__gl_resolve_file() {
+  local tool="$1" token="$2" ext="$3"
+  local base="$GL/src/test/deca"
+  local -a matches=()
+
+  if [[ -f "$token" ]]; then
+    printf '%s\n' "$token"
+    return 0
+  fi
+
+  if [[ "$token" == */* ]]; then
+    if [[ -f "$base/$token" ]]; then
+      printf '%s\n' "$base/$token"
+      return 0
+    fi
+    echo "Erreur: Fichier '$token' introuvable (ni direct, ni sous $base)." >&2
+    return 1
+  fi
+
+  if [[ -n "$ext" && "$token" != *.* ]]; then
+    mapfile -d '' matches < <(find "$base" -type f \( -name "$token.$ext" -o -name "$token" \) -print0)
+  else
+    mapfile -d '' matches < <(find "$base" -type f -name "$token" -print0)
+  fi
+
+  case "${#matches[@]}" in
+    0)
+      echo "Erreur: Fichier '$token' introuvable dans $base." >&2
+      return 1
+      ;;
+    1)
+      printf '%s\n' "${matches[0]}"
+      return 0
+      ;;
+    *)
+      echo "Erreur: plusieurs fichiers correspondent à '$token' :" >&2
+      printf '  %s\n' "${matches[@]}" >&2
+      return 1
+      ;;
+  esac
+}
+
+
+ftest() {
+  local tool="$1"
+  shift || { echo "Usage: ftest <tool> [options] [fichiers...]" >&2; return 1; }
+
+  local ext="$(__gl_default_ext "$tool")"
+  local -a opts=()
+  local -a files=()
+
+  while (($#)); do
+    case "$1" in
+      -h|--help|-\?)
+        opts+=("$1"); shift
+        ;;
+      --)
+        shift
+        while (($#)); do
+          files+=("$(__gl_resolve_file "$tool" "$1" "$ext")") || return 1
+          shift
+        done
+        break
+        ;;
+      -r|-ir|-t)
+        opts+=("$1"); shift
+        (($#)) || { echo "Erreur: option '${opts[-1]}' attend une valeur." >&2; return 1; }
+        opts+=("$1"); shift
+        ;;
+      -*)
+        opts+=("$1"); shift
+        ;;
+      *)
+        files+=("$(__gl_resolve_file "$tool" "$1" "$ext")") || return 1
+        shift
+        ;;
+    esac
+  done
+
+  echo "Exécution de $tool ${opts[*]} ${files[*]}"
+  "$tool" "${opts[@]}" "${files[@]}"
+}
+
+# Aliases
+
+# Affichage du fichier
+alias print='ftest cat'
+
+# Test sur un seul fichier
+alias test='function _test(){ mvn -Dstyle.color=always test-compile surefire:test -Dtest=$1 | grep "Tests run" | tail -n 1; }; _test'
+alias test-full='function _test-full(){ mvn -Dstyle.color=always test-compile surefire:test -Dtest=$1; }; _test-full'
+
+# Lancement des tests
+alias mvntreg='mvn test -Dregression'
+alias mvntall='mvn test -Dall'
+alias mvntr='mvn test -Dr'
+alias mvnto='mvn test -Do'
+alias mvntro='mvn test -Dr -Do'
+alias mvnt='mvn test'
+
+# Analyses lexicales et sémantiques
+alias parse='ftest test_synt'
+alias lex='ftest test_lex'
+alias sema='ftest test_context'
+
+# Compilation
+alias decac='ftest decac'
+alias exec='ftest decac'
+
+# Exécutions
+alias run='ftest ima'
+alias ir_rars='ftest rars'
+alias ir_ima='ftest ima'
+alias ir_qbe='ftest qbe_emit -t rv64'
+
+# Performance 
+alias perf='ftest ima -s'
+
+# Demo 
+alias demo_moitie='bash $GL/src/test/script/demo/affiche_moitie.sh'
+alias demo_para='bash $GL/src/test/script/demo/compile_10.sh'

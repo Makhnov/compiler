@@ -1,0 +1,35 @@
+// Description:
+//    Test des casts explicites et troncature implicite
+//
+// Resultats:
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    // Cast explicite float -> int
+    float f = 3.99;
+    int i = (int) (f);
+
+    // Cast explicite int -> float
+    int j = 7;
+    float g = (float) (j);
+
+    // Troncature implicite int -> float
+    int k = 5;
+    float h = k; // pas de cast explicite
+
+    if (i != 3) {
+        println("Erreur: cast explicite float -> int incorrect");
+        1/0;
+    }
+    if (g != 7.0) {
+        println("Erreur: cast explicite int -> float incorrect");
+        1/0;
+    }
+    if (h != 5.0) {
+        println("Erreur: troncature implicite int -> float incorrecte");
+        1/0;
+
+    }
+}

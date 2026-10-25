@@ -1,0 +1,25 @@
+// Description:
+//   Test d'un programme Deca avec la déclaration d'une classe qui étend une autre classe.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+class ParentClass {
+    int parentField;
+    
+    void parentMethod() {
+        parentField = 5;
+    }
+}
+class ChildClass extends ParentClass {
+    int childField;
+    
+    void childMethod() {
+        childField = 10;
+    }
+}
+{
+}

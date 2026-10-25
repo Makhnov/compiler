@@ -1,0 +1,17 @@
+// Description:
+//    Test de verifcation, println(a, b, c) éq à print(a); print(b); print(c); println();
+//
+// Resultats:
+//    102030
+//    10
+//
+// Historique:
+//    cree le 07/01/2026
+
+{
+    int a = 10;
+    int b = 20;
+    int c = a + b;
+    println(a, b, c); // equivalent a print(a); print(b); print(c); println();
+    print(a);
+}

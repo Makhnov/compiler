@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec un identifiant qui a bien été déclaré;
+//   Règle (0.1) de la grammaire attribuée  
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    int x;
+    x = 3;
+}

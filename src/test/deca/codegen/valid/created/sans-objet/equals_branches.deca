@@ -1,0 +1,61 @@
+// Description:
+//    Test des différentes branches de Equals (==)
+//
+// Resultats:
+//    x == 0: true
+//    x == 5: false
+//    0 == y: true
+//    a == b: true
+//    c == d: false
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int x = 0;
+    int y = 0;
+    int a = 42;
+    int b = 42;
+    int c = 10;
+    int d = 20;
+
+    // Cas x == 0 (rhs est 0)
+    if (x == 0) {
+        println("x == 0: true");
+    } else {
+        println("x == 0: false");
+        1/0;
+    }
+
+    // Cas x == constante non-zero
+    if (x == 5) {
+        println("x == 5: true");
+        1/0;
+    } else {
+        println("x == 5: false");
+    }
+
+    // Cas 0 == y (lhs est 0)
+    if (0 == y) {
+        println("0 == y: true");
+    } else {
+        println("0 == y: false");
+        1/0;
+    }
+
+    // Cas général a == b
+    if (a == b) {
+        println("a == b: true");
+    } else {
+        println("a == b: false");
+        1/0;
+    }
+
+    // Cas général c == d (false)
+    if (c == d) {
+        println("c == d: true");
+        1/0;
+    } else {
+        println("c == d: false");
+    }
+}

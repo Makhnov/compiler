@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec un while invalide.
+//
+// Resultats:
+//   Erreur : Type attendu dans while : boolean
+//
+// Historique:
+//    cree le 07/01/2026
+
+{
+    while (2) {
+    }
+}

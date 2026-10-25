@@ -1,0 +1,11 @@
+// Description:
+//    Tests de programme lexicalement correct avec des caractères spéciaux.
+//
+// Resultats:
+//    output respecté
+// Historique:
+//    cree le 10/01/2025
+
+{
+    println("   , \\n \\t {} () . ; \\r ...");
+}

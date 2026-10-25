@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec un identifiant qui n'est pas déclaré;
+//   Règle (0.1) de la grammaire attribuée 
+//
+// Resultats:
+//   Ligne 12 : Identifiant non déclaré
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    x = 3;
+}

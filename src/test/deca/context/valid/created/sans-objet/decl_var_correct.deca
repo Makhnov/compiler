@@ -1,0 +1,14 @@
+// Description:
+//   Test d'un programme Deca avec déclaration de deux variables avec des types cohérents;
+//   Règle (3.17) de la grammaire attribuée
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    int x;
+    float y;
+}

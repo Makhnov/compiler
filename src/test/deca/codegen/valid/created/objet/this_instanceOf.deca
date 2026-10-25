@@ -1,0 +1,25 @@
+// Description:
+//   Test d'un de instanceOf avec this
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2025
+
+class A {
+
+	boolean m (){
+		return this instanceof A;
+	}
+}
+
+{
+	A a = new A();
+	if (!a.m()){
+		println("KO");
+		1/0;
+	} else {
+		print("OK");
+	}
+}

@@ -1,0 +1,56 @@
+// Description:
+//    Test des optimisations in-place (x = x + 1, etc.)
+//
+// Resultats:
+//    x: 10
+//    y: 5
+//    z: 200
+//    w: 1
+//    i: 1
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    int x = 0;
+    int y = 10;
+    int z = 2;
+    int w = 16;
+    int i = 48;
+
+    // x = x + constant (devrait declencher codeGenInPlace de Plus)
+    x = x + 1;
+    x = x + 2;
+    x = x + 3;
+    x = x + 4;
+
+    // y = y - constant (devrait declencher codeGenInPlace de Minus)
+    y = y - 1;
+    y = y - 2;
+    y = y - 2;
+
+    // z = z * constant (devrait declencher codeGenInPlace de Multiply)
+    z = z * 2;
+    z = z * 5;
+    // constante a gauche (commutativite, teste rhsIsDest)
+    z = 2 * z;
+    z = 5 * z;
+
+    // w = w / constant (devrait declencher codeGenInPlace de Divide)
+    w = w / 2;
+    w = w / 5;
+
+    // i = i / constant (devrait declencher codeGenInPlace de Divide)
+    i = i % 15;
+    i = i % 2;
+
+    if (x != 10 || y != 5 || z != 200 || w != 1 || i != 1) {
+        println("KO");
+        1/0;
+    }
+    println("x: ", x);
+    println("y: ", y);
+    println("z: ", z);
+    println("w: ", w);
+    println("i: ", i);
+}

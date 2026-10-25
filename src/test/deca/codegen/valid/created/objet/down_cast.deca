@@ -1,0 +1,26 @@
+// Description:
+//   Test down cast en Deca
+//
+// Resultats:
+//  Child class
+//
+// Historique:
+//    cree le 05/01/2026
+
+class Parent {
+    void display() {
+        println("Parent class");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        println("Child class");
+    }
+}
+
+{
+    Parent p = new Child(); //UpCast
+    Child c = (Child) (p); // Down cast de Parent à Child
+    c.display(); // Devrait afficher "Child class"
+}

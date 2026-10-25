@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec une chaine de caractère invalide;
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+{
+    "Ceci est une chaine de caractère ouverte;
+}

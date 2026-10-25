@@ -1,0 +1,16 @@
+// Description:
+//   Test de priorité d'opération en Deca
+//
+// Resultats:
+//    -4
+//
+// Historique:
+//    cree le 09/01/2026
+
+{
+    int x = 1;
+    int y = 2;
+    int z;
+    z = 2 * x - 3 * y;
+    println(z);
+}

@@ -1,0 +1,24 @@
+// Description:
+//    Overflow lors d'une addition d'entiers
+//
+// Resultats:
+//    -2147483648
+//    -2147483648
+//
+// Historique:
+//    cree le 10/01/2026
+
+{
+    int x = 2147483647;
+    int y = 1;
+    int z = x + y;
+
+    if (z != (-2147483647 -1)) {
+        println("KO");
+        1/0;
+    }
+    println(z);
+
+    // Addition directe
+    println(2147483647 + 1); // Résultat attendu: -2147483648
+}

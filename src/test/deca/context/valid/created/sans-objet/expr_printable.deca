@@ -1,0 +1,19 @@
+// Description:
+//   Test d'un programme Deca avec des exp_print valides (int, float, string)
+//   Règle (3.31)
+//
+// Resultats:
+//   5
+//   2.0
+//   Hello
+//
+// Historique:
+//   cree le 05/01/2026
+
+{
+int i = 5;
+float f = 2.0;
+println(i);
+println(f);
+println("Hello");
+}

@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec méthode asm invalide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/01/2026
+
+class Class {
+    void Method() asm ("String1" + "String2"); 
+}

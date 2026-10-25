@@ -1,0 +1,32 @@
+// Description:
+//   Test valide d'un programme Deca avec appeel de méthodes héritées
+//   Règle (2.7)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 16/01/2026
+
+class Type1{}
+
+class Type2 extends Type1{}
+
+class Mere {
+    Type1 Method() { 
+        return new Type1();
+    }
+}
+class Fille extends Mere {
+    Type2 Method() {
+        return new Type2();
+        }
+}
+
+{
+    Fille f = new Fille();
+    Mere m1 = new Mere();
+    Mere m2 = new Fille();
+    Type2 t2 = f.Method();
+    Type1 t3 = m1.Method();
+    Type1 t4 = m2.Method();
+}

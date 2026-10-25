@@ -1,0 +1,73 @@
+// Description:
+//   Test des methodes de classe en Deca
+//
+// Resultats:
+//   Method A called
+//   Arguments received: 5, 3.20000e+00
+//   a: 10, b: 2.05000e+01, c is true
+//   Sum of 4 and 6: 10
+//   Sum of a and 15: 25
+//   a: 30, b: 4.05000e+01, c is false
+//
+// Historique:
+//    cree le 05/01/2026
+
+class A {
+    int a = 10;
+    float b = 20.5;
+    boolean c = true;
+
+    void printMethod() {
+        println("Method A called");
+    }
+
+    void printArg(int x, float y, boolean z) {
+        println("Arguments received: ",  x,  ", ",  y);
+    }
+
+    void printFields() {
+        print("a: ",  a,  ", b: ",  b);
+        if (c) {
+            println(", c is true");
+        } else {
+            println(", c is false");
+        }
+    }
+
+    void setFields(int newA, float newB, boolean newC) {
+        this.a = newA;
+        this.b = newB;
+        this.c = newC;
+    }
+
+    int sum(int x, int y) {
+        return x + y;
+    }
+
+    int sumAAndParam(int x) {
+        return a + x;
+    }
+}
+
+{
+    A obj = new A();
+    int s1 = obj.sum(4, 6);
+    int s2 = obj.sumAAndParam(15);
+
+    // Appels
+    obj.printMethod();
+    obj.printArg(5, 3.2, false); // Appel avec arguments
+    obj.printFields();
+
+    // Returns
+    if (s1 != 10 || s2 != 25) {
+        println("KO");
+        1/0;
+    }
+    println("Sum of 4 and 6: ",  s1);
+    println("Sum of a and 15: ",  s2);
+
+    // Modification des champs
+    obj.setFields(30, 40.5, false);
+    obj.printFields();
+}

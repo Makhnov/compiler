@@ -1,0 +1,23 @@
+// Description:
+//  Overflow lors d'une multiplication d'entiers
+//
+// Resultats:
+//    -655335
+//    -655335
+//
+// Historique:
+//    cree le 10/01/2026
+
+{
+    int x = 65531;
+    int y = 65531;
+    int z = x * y;
+
+    if (z != -655335) {
+        println("KO");
+    }
+    println(z);
+    
+    // Multiplication directe
+    println(65531 * 65531);
+}

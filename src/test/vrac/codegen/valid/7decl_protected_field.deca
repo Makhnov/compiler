@@ -1,0 +1,11 @@
+// Resultats:
+//
+// Historique:
+class A {
+    protected int x;
+}
+class B extends A {
+    void m() {
+        x = 1; // Accès autorisé dans la sous-classe
+    }
+}   

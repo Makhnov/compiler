@@ -1,0 +1,13 @@
+// Description:
+//   Selection de champ sur un non-objet
+//
+// Resultats:
+//   Erreur contextuelle
+//
+// Historique:
+//   cree le 18/01/2026
+
+{
+    int x = 5;
+    int y = x.champ;
+}

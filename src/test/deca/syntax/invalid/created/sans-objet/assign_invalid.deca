@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec une affectation invalide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+{
+    int a =;
+}

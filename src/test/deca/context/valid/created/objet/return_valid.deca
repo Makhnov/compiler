@@ -1,0 +1,39 @@
+// Description:
+//   Test valide d'un programme Deca avec return
+//   Règle (3.24)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Type{}
+
+class Mere{}
+
+class Fille extends Mere{}
+
+class Class {
+    int i = 1;
+    float f = 1.5;
+    boolean b = true;
+    Type t = new Type();
+    Mere fille = new Fille();
+    int MethodInt(){
+        return i;
+    }
+    float MethodFloat(){
+        return f;
+    }
+    boolean MethodBoolean(){
+        return b;
+    }
+    Type MethodType(){
+        return t;
+    }
+    void MethodVoid(){}
+
+    Mere MethodFille(){
+        return fille;
+    }
+}

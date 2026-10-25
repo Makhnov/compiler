@@ -1,0 +1,12 @@
+// Description:
+//   Test invalide d'un programme Deca avec héritage d'une classe qui n'en est pas une
+//   Règle (2.3)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 15/01/2026
+
+
+class Fille extends Mere{}

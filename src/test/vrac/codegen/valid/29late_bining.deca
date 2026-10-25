@@ -1,0 +1,26 @@
+// Description:
+//    Appel d'une méthode redéfinie depuis une méthode de la super-classe.
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2026
+
+class A {
+    int getVal() { return 1; }
+    int callVal() { return this.getVal(); }
+}
+class B extends A {
+    int getVal() { return 2; }
+}
+{
+    A a = new B();
+    // this.getVal() doit appeler B.getVal() car 'this' est un B dynamiquement
+    if (a.callVal() == 2) {
+        println("OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "java.format.settings.url": "${workspaceFolder}/formatter.xml",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "editor.formatOnSave": false,
+    "[java]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "files.associations": {
+        "*.g4": "antlr"
+    },
+    "[antlr]": {
+        "editor.formatOnSave": true
+    },
+}

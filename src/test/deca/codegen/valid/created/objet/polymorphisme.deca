@@ -1,0 +1,50 @@
+ // Description:
+//    Test du polymorphisme avec le type dynamique 
+//
+// Resultats:
+//    Je suis un animal
+//    Je suis un chien
+//    Je suis un chat
+//    Waouf, wouaf, wouaf !!!
+//    Miaou, miaou, miaou !!!
+//
+// Historique:
+//    cree le 07/01/2026
+
+  class Animal {
+    void QuiSuisJe(){
+        println("Je suis un animal");
+    }
+    void Parler(){
+        println("Hello");
+    }
+  }
+  class Chien extends Animal{
+    void QuiSuisJe(){
+        println("Je suis un chien");
+    }
+    void Parler(){
+        println("Waouf, wouaf, wouaf !!!");
+    } 
+  }
+  class Chat extends Animal{ 
+    void QuiSuisJe(){
+        println("Je suis un chat");
+    }
+    void Parler(){
+        println("Miaou, miaou, miaou !!!");
+    } 
+  }
+
+{
+    Animal a = new Animal();
+    Animal b = new Chien(); //Type statique Animal, Type dynamique Chien
+    Animal c = new Chat(); //Type statique Animal, Type dynamique Chat
+
+    //Test utilisation type dynamique pour QuiSuisJe
+    a.QuiSuisJe(); // "Je suis un animal"
+    b.QuiSuisJe(); // "Je suis un chien"
+    c.QuiSuisJe(); // "Je suis un chat"
+    b.Parler(); // "Waouf, wouaf, wouaf !!!"
+    c.Parler(); // "Miaou, miaou, miaou !!!"
+}

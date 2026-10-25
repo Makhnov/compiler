@@ -1,0 +1,29 @@
+// Description:
+//    Le choix de la méthode appelée dépend de l'objet, pas du paramètre.
+//
+// Resultats:
+//    OK
+//
+// Historique:
+//    cree le 17/01/2026
+
+class A { int id() { return 1; } }
+class B extends A { int id() { return 2; } }
+
+class Processor {
+    int process(A obj) {
+        return obj.id();
+    }
+}
+{
+    Processor p = new Processor();
+    A a = new A();
+    B b = new B();
+    
+    if (p.process(a) == 1 && p.process(b) == 2) {
+        println("OK");
+    } else {
+        println("KO");
+        1/0;
+    }
+}

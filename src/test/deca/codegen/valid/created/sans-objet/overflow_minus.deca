@@ -1,0 +1,23 @@
+// Description:
+//  Overflow lors d'une soustraction d'entiers
+//
+// Resultats:
+//    2147483647
+//    2147483647
+//
+// Historique:
+//    cree le 10/01/2026
+
+{
+    int x = -2147483647;
+    int y = 2;
+    int z = x - y;
+    if (z != 2147483647) {
+        println("KO");
+        1/0;
+    }
+    println(z);
+
+    // Soustraction directe
+    println(-2147483647 - 2); // Résultat attendu: 2147483647
+}

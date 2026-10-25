@@ -1,0 +1,17 @@
+// Description:
+//   Test invalide d'affectation de this a un class
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 17/01/2026
+
+class A {
+
+    void m() {
+        this = new A();
+    }
+
+}
+

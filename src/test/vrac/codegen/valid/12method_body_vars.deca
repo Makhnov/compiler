@@ -1,0 +1,10 @@
+// Resultats:
+//
+// Historique:
+class A {
+    void m() {
+        int x = 1;
+        float y = 2.0;
+        x = x + 1;
+    }
+}

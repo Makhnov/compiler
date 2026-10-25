@@ -1,0 +1,22 @@
+// Description:
+//   Test classe null
+//
+// Resultats:
+//
+//
+// Historique:
+//    cree le 05/01/2026
+
+class A {
+    int field1 = 10;
+    float field2 = 20.5;
+}
+
+{
+    A a = null;
+    // On ne fait rien avec 'a' pour tester le comportement avec une reference nulle.
+    if (a != null) {
+        println("KO");
+        1/0;
+    }
+}

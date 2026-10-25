@@ -1,0 +1,15 @@
+// Description:
+//    Test de la méthode isExpression de la classe TypeDefinition
+//
+// Resultats:
+//    (aucun output)
+//
+// Historique:
+//    cree le 16/01/2026
+
+class Class{}
+
+{
+    Class c;
+    c = Class;
+}

@@ -1,0 +1,15 @@
+// Description:
+//   Test d'un programme Deca avec erreur de modulo;
+//   Règle (3.51) de la grammaire attribuée
+//
+// Resultats:
+//   modulo entre un int et un float impossible
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    float f = 2.5;
+    int i = 1;
+    i = i % f;  // int % float n'est pas possible
+}

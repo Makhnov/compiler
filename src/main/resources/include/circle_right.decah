@@ -1,0 +1,4 @@
+// Fonctionne avec include_circular.deca
+
+#include "circle_left.decah"
+int y = 10;

@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec des prints valides   .
+//
+// Resultats:
+//   Test print without newline -- test
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    print("Test print without newline -- "); // resultat attendu : Test print with newline
+    print("test"); // resultat attendu : newline
+}

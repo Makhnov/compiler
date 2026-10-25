@@ -1,0 +1,16 @@
+// Description:
+//   Test valide d'un programme Deca avec déclaration d'un champ portant le nom d'un champ héritée
+//   Règle (2.5)
+//
+// Resultats:
+//
+// Historique:
+//   cree le 15/01/2026
+
+class Mere {
+    int var;
+}
+
+class Fille extends Mere{
+    int var;
+}

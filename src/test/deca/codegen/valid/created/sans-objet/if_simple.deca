@@ -1,0 +1,30 @@
+// Description:
+//   Test du if then else en Deca
+//
+// Resultats:
+//   i: 100
+//   y: 11
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    int i = 0;
+    int y = 10;
+    if (i < 100) {
+        i = 100;
+    } else if (i > 100) {
+        y = y + 200;
+    } else {
+        y = y + 100;
+    }
+
+    if (y == 210) {
+        y = y + 0;
+    } else {
+        y = y + 1;
+    }
+
+    println("i: ", i); // i: 100
+    println("y: ", y); // y: 210
+}

@@ -1,0 +1,13 @@
+// Description:
+//   Test invalide d'un programme Deca avec déclaration d'une classe dans une classe.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+
+class Class{
+    class otherClass{}
+}

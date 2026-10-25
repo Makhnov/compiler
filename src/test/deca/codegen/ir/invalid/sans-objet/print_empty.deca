@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec un print invalide.
+//
+// Resultats:
+//   
+// Historique:
+//    cree le 13/01/2026
+
+{
+    int x;
+    println(x);    //Provoque une erreur car x non initialisé
+}

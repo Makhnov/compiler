@@ -1,0 +1,55 @@
+// Description:
+//  Test du retour de champs d'une classe en Deca
+//
+// Resultats:
+//  field1: 10
+//  field2: 2.05000e+01
+//  returnTrue() returned true
+//
+// Historique:
+//    cree le 05/01/2026
+
+class A {
+    int field1 = 10;
+    float field2 = 20.5;
+    
+    int getField1() {
+        return field1;
+    }
+    
+    float getField2() {
+        return field2;
+    }
+
+    boolean returnTrue() {
+        return true;
+    }
+
+    int notPrinting() {
+        return 42;
+        println("This should not be printed");
+        1/0;
+    }
+}
+
+{
+    A a = new A();
+    int f1 = a.getField1();
+    float f2 = a.getField2();
+    
+    a.notPrinting(); // This should not print anything
+
+    if (f1 != 10 || f2 != 20.5) {
+        println("KO");
+        1/0;
+    }
+    println("field1: ",  f1); // field1: 10
+    println("field2: ",  f2); // field2: 20.5
+
+    if (a.returnTrue()) {
+        println("returnTrue() returned true");
+    } else {
+        println("returnTrue() returned false");
+        1/0;
+    }
+}

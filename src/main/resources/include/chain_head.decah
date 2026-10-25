@@ -1,0 +1,4 @@
+// Fonctionne avec include_chain.deca
+
+#include "chain_tail.decah"
+int y = 12;

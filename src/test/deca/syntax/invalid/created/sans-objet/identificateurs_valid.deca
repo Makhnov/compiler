@@ -1,0 +1,21 @@
+// Description:
+//    Tests de programme lexicalement correct avec une chaine de caractères complète.
+//
+// Resultats:
+//    (aucun output)
+// Historique:
+//    cree le 16/12/2025
+
+{
+    Class class;
+    Animal;
+    _test_;
+    $test;
+    $test$test$;
+    int a;
+    int nombre;
+    String test1;
+    float test_nom_var_long;
+    boolean c;
+    void d;
+}

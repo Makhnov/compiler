@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec if-else valide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    if (a > b) {
+        max = a;
+    } else {
+        max = b;
+    }
+}

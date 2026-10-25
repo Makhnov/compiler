@@ -1,0 +1,21 @@
+// Description:
+//    Tests de programme lexicalement correct avec une chaine de caractères complète ainsi que la chaine vide.
+//
+// Resultats:
+//    (aucun output)
+// Historique:
+//    cree le 16/12/2025
+
+{
+    // Commentaire sur une ligne
+    /*
+    * Commentaire sur plusieurs lignes
+    */
+    "";
+    "
+    String sur
+    plusieurs
+    lignes
+    ";
+    "Ceci est une chaine de caractères complète avec des espaces, des chiffres 12345 et des symboles !@#$.";
+}

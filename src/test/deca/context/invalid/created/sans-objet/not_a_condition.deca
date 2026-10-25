@@ -1,0 +1,16 @@
+// Description:
+//   Test d'un programme Deca avec une condition qui n'est pas valable (pas un bool);
+//   Règle (3.29) de la grammaire attribuée
+//
+// Resultats:
+//   Ligne 13 : La condition utilisée n'est pas un booléen 
+//
+// Historique:
+//    cree le 05/01/2026
+
+{
+    int x = 2;
+    if (x) {
+        println("La condition a marché");
+    }
+}

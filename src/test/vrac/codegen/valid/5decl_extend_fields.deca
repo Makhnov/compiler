@@ -1,0 +1,10 @@
+// Resultats:
+//
+// Historique:
+class A {
+    int x;
+}
+
+class B extends A{
+    int y;
+}

@@ -1,0 +1,70 @@
+#!/bin/sh
+
+# Utilisation : test_codegen <fichier.deca> <mode>
+
+
+# On se place dans le répertoire du projet (quel que soit le
+# répertoire d'où est lancé le script) :
+cd "$(dirname "$0")"/../../../.. || exit 1
+. ./src/test/script/tools/common.sh
+
+PATH=./src/test/script/launchers:"$PATH"
+PATH=./src/main/bin:"$PATH"
+# Gestion des options
+register_option=0
+o_option=""
+
+for arg in "$@"; do
+    if [ "$arg" = "-o" ]; then
+        if [ -z "$o_option" ] ; then
+            o_option="-n -o"
+        else
+            o_option="$o_option -o"
+        fi
+    fi
+    if [ "$arg" = "-r" ]; then
+        register_option=1
+    fi
+    # si arg > 0 et pas -o ou -r, on ignore (c'est le fichier de test)
+    if [ "$arg" != "-o" ] && [ "$arg" != "-r" ]; then
+        file_test="$arg"
+    fi
+    # sinon on ignore l'argument
+
+done
+ 
+# On récupère le chemin absolu du fichier .deca AVANT de faire le cd
+# Cela permet de lancer le script de n'importe où
+if [ "${1#/}" = "$1" ]; then
+    # Si le chemin ne commence pas par /, il est relatif -> on ajoute le pwd
+    fichier_test="$(pwd)/$file_test"
+else
+    # Sinon il est déjà absolu
+    fichier_test="$file_test"
+fi
+fichier_ass="${fichier_test%.deca}.ass"
+fichier_res="${fichier_test%.deca}.res"
+
+# Fonction pour tester un fichier spécifique
+# Usage: run_test_case <nb_registres> <fichier_deca>
+exec_ima() {
+    nb_regs="$1"
+    if ! decac $o_option -r $nb_regs $fichier_test 2>&1; 
+    then
+        log_error " Erreur compilation (decac) : $(basename "$fichier_test")${COLOR_RESET}"
+        rm -f "$fichier_ass" "$fichier_res"
+        return 1
+    fi
+
+    ima "$fichier_ass" > "$fichier_res"
+}
+
+exec_ima "16"
+if [ "$register_option" -eq 0 ]; then
+        exec_ima "16" "$o_option"
+else
+    for reg in 4 8 16; do
+        log_info "---- Test avec $reg registres ----"
+        exec_ima "$reg" "$o_option"
+    done
+fi

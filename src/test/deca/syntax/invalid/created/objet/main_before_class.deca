@@ -1,0 +1,15 @@
+// Description:
+//   Test invalide d'un programme Deca avec main avant les déclaration de classes
+//   Règle (1.1)
+//
+// Resultats:
+//   (aucun output)
+//
+// Historique:
+//   cree le 15/01/2026
+
+{
+//Ceci est le main
+}
+
+class Classe {}

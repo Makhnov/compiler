@@ -1,0 +1,7 @@
+class A {}
+class B extends A {}
+class C extends A {}
+{
+    A c = new C();
+    B b = (B) (c); // ERREUR : incompatible Cast
+}

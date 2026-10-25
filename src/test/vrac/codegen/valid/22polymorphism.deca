@@ -1,0 +1,14 @@
+// Resultats:
+//    B
+//
+// Historique:
+class A {
+    void m() { println("A"); }
+}
+class B extends A {
+    void m() { println("B"); }
+}
+{
+    A a = new B(); // Type statique A, type dynamique B
+    a.m(); // Doit afficher "B" (Late binding)
+}

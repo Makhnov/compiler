@@ -1,0 +1,21 @@
+// Description:
+//   Test d'un programme Deca avec des déclarations de méthodes.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+
+class Class{
+
+    retType1 Method1(type1 param1, type2 param2){
+        return ret1;
+    }
+
+    retType2 Method2(){
+        param = this.Method1();
+        return ret2;
+    }
+}

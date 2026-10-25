@@ -1,0 +1,13 @@
+// Resultats:
+//    10
+//
+// Historique:
+class A {
+    int mult(int a) {
+        return a * 2;
+    }
+}
+{
+    A a = new A();
+    println(a.mult(5));
+}

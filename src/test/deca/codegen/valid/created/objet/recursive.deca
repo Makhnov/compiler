@@ -1,0 +1,44 @@
+// Description:
+//    Test de la récursivité avec Factorielle et Fibonacci  
+//
+// Resultats:
+//    3628800
+//    55
+//    
+//    
+//    
+//
+// Historique:
+//    cree le 07/01/2026
+
+
+class Math{
+    int Factorielle(int n){
+        if (n <= 1){
+            return 1;
+        }
+        return n*this.Factorielle(n-1);
+    }
+
+    int Fibonacci(int n){
+        if (n <= 1){
+            return n;
+        }
+        return Fibonacci(n-1)+Fibonacci(n-2);
+    }
+}
+
+{
+    Math m = new Math();
+    int x = m.Factorielle(10), y = m.Fibonacci(10);
+
+    println(x);
+    println(y);
+    
+    if (x != 3628800 || y != 55) {
+        println("KO");
+        1/0;
+    }
+}
+
+

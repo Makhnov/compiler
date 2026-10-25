@@ -1,0 +1,73 @@
+// Description:
+//   Test complet des commentaires complexes en Deca.
+//   Teste diverses formes de commentaires valides :
+//   - Commentaires sur une ligne (//)
+//   - Commentaires multi-lignes (/* */)
+//   - Commentaires imbriqués
+//   - Commentaires mélangés avec du code
+//   - Commentaires vides
+//   - Commentaires avec caractères spéciaux
+//
+// Resultats:
+//   Avant commentaire 5
+//   Valeur y 3.14000e+00
+//   Dans la boucle
+//   Résultat final 10
+//
+//
+// Historique:
+//    cree le 11/01/2026
+
+{
+    // Commentaire simple sur une ligne
+    int x = 5; // Affectation d'une variable
+    
+    // Commentaire avec du code à côté
+    float y = 3.14; /* Valeur PI */
+    
+    /* Commentaire multi-lignes
+       qui s'étend sur plusieurs lignes
+       avec du texte formaté */
+    boolean flag = true;
+    
+    /* Début d'un commentaire
+       /* Commentaire imbriqué - Deca gère les /**/
+          plus de contenu */
+       Fin du premier commentaire */
+    
+    // Commentaires consécutifs
+    // Premier commentaire
+    // Deuxième commentaire
+    // Troisième commentaire
+    int result = 10;
+    
+    /* Commentaire vide: */
+    /**/
+    
+    /* Commentaire avec caractères spéciaux:
+       !@#$%^&*()_+-=[]{}|;:'",.<>?/\~` */
+    
+    // Commentaire avec barres obliques
+    // Attention: // ceci n'est pas un commentaire imbriqué
+    /* Attention: /* ceci est un commentaire imbriqué */ */
+    
+    // Commentaire avant instruction
+    println("Avant commentaire", x);
+    
+    /* Commentaire multi-ligne
+       avant instruction */
+    println("Valeur y", y);
+    
+    // Commentaire après boucle
+    while (flag) {
+        println("Dans la boucle");
+        flag = false; // Arrêt de la boucle
+        /* Commentaire à l'intérieur
+           d'une boucle */
+    }
+    
+    // Commentaire final
+    println("Résultat final", result);
+    /* Dernier commentaire multi-ligne
+       du programme */
+}

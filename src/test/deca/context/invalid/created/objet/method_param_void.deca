@@ -1,0 +1,14 @@
+// Description:
+//   Test invalide d'un programme Deca avec un paramètre void dans une méthode.
+//   Règle (2.9)
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 15/01/2026
+
+class Type{}
+
+class Class{
+    Type Method(void param){}
+}

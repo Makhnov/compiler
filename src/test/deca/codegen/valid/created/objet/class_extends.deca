@@ -1,0 +1,55 @@
+// Description:
+//    Test de l'extention de classes en Deca.
+//
+// Resultats:
+//    Parent method called
+//    Child method called
+//    Parent method called
+//    Child method called
+//    Parent method called
+//
+// Historique:
+//    cree le 06/01/2026
+
+class Parent {
+    int parentField = 42;
+
+    void parentMethod() {
+        println("Parent method called");
+    }
+}
+
+class Child extends Parent {
+    int childField = 84;
+
+    void childMethod() {
+        println("Child method called");
+    }
+}
+
+class Parent2 extends Parent {
+    // Classe vide pour tester l'heritage sans ajout
+}
+
+class Child2 extends Child {
+    // Classe vide pour tester l'heritage en profondeur
+}
+
+{
+    Child c = new Child();
+    Child2 c2 = new Child2();
+    Parent2 p2 = new Parent2(); 
+
+    // Acces aux champs
+    if (c.parentField != 42 || c.childField != 84 || c2.parentField != 42 || c2.childField != 84 || p2.parentField != 42) {
+        println("KO");
+        1/0;
+    }
+
+    // Appel des methodes
+    c.parentMethod();
+    c.childMethod();
+    c2.parentMethod();
+    c2.childMethod();
+    p2.parentMethod();
+}

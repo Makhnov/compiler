@@ -1,0 +1,181 @@
+// Description:
+//    Test complet des structures de contrôle en Deca (branch_full).
+//    Inclut : Opérateurs booléens, If-Then-Else imbriqués, While, 
+//    et évaluation paresseuse (court-circuit) avec effets de bord.
+//
+// Resultats:
+//    --- 1. Test Booleans ---
+//    Boolean AND et NOT fonctionne correctement
+//    Boolean OR fonctionne correctement
+//    Boolean AND avec false fonctionne correctement
+//    Boolean OR avec true fonctionne correctement
+//    Boolean complexe avec NOT, OR et AND fonctionne correctement
+//    --- 2. Test If-Then-Else ---
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    OK
+//    --- 3. Test While ---
+//    i: 100
+//    y: 210
+//    --- 4. Test Court-circuit & Effets de bord ---
+//    0
+//    0
+//    3
+//    4
+//    1
+//
+// Historique:
+//    cree le 15/01/2026
+
+{
+    // Déclarations globales
+    int x;
+    int y;
+    int i;
+    boolean a = true;
+    boolean b = false;
+
+    println("--- 1. Test Booleans ---");
+    
+    if (a && !b) {
+        println("Boolean AND et NOT fonctionne correctement");
+    } else {
+        println("Erreur dans Boolean AND ou NOT");
+    }
+
+    if (a || b) {
+        println("Boolean OR fonctionne correctement");
+    } else {
+        println("Erreur dans Boolean OR");
+    }
+
+    if (a && b) {
+        println("Erreur dans Boolean AND");
+    } else {
+        println("Boolean AND avec false fonctionne correctement");
+    }
+
+    if (!a || b) {
+        println("Erreur dans Boolean OR ou NOT");
+    } else {
+        println("Boolean OR avec true fonctionne correctement");
+    }
+    
+    if (!a || !b && a){
+        println("Boolean complexe avec NOT, OR et AND fonctionne correctement");
+    } else {
+        println("Erreur dans la combinaison des Boolean AND, NOT et OR");
+    }
+
+
+    println("--- 2. Test If-Then-Else ---");
+    
+    x = 10;
+    y = 0;
+
+    // CAS 1 : If Simple (Condition Vraie)
+    if (x == 10) {
+        println("OK");
+    }
+
+    // CAS 2 : If Simple (Condition Fausse, else vide)
+    if (x == 0) {
+        println("ECHEC : Ce message ne doit pas s'afficher (Cas 2)");
+    } else {
+        // Else vide
+    }
+    println("OK");
+
+    // CAS 3 : If / Else
+    if (x < 5) {
+        println("ECHEC : Condition fausse (x < 5) executee");
+    } else {
+        println("OK");
+    }
+
+    // CAS 4 : Imbrication (If dans Else)      
+    if (x == 0) {
+       println("ECHEC : x n'est pas 0");
+    } else {
+       println("OK");
+       
+       // Imbrication
+       if (y == 0) {
+           println("OK");
+       } else {
+           println("ECHEC : y est bien egal a 0");
+       }
+       println("OK");
+    }
+
+    // CAS 5 : Imbrication (If dans If)
+    if (x == 10) {
+        println("OK");
+        
+        // Imbrication
+        if (y == 0) {
+            println("OK");
+        } else {
+            println("ECHEC : y est bien egal a 0");
+        }
+        println("OK");
+    } else {
+        println("ECHEC : x est bien egal a 10");
+    }
+
+
+    println("--- 3. Test While ---");
+    
+    i = 0;
+    y = 10; // On réinitialise y pour ce test
+    while (i < 100) {
+        i = i + 1;
+        y = y + 2;
+    }
+    println("i: ", i); // i: 100
+    println("y: ", y); // y: 10 + 200 = 210
+
+
+    println("--- 4. Test Court-circuit & Effets de bord ---");
+
+    // false && any : RHS ne doit pas être évalué (x reste 0)
+    x = 0;
+    if (false && ((x = 1) == 1)) {
+        println(999);
+    }
+    println(x);
+
+    // true || any : RHS ne doit pas être évalué (x reste 0)
+    x = 0;
+    if (true || ((x = 2) == 2)) {
+        // rien
+    }
+    println(x);
+
+    // true && any : RHS DOIT être évalué (x devient 3)
+    x = 0;
+    if (true && ((x = 3) == 3)) {
+        // rien
+    }
+    println(x);
+
+    // false || any : RHS DOIT être évalué (x devient 4)
+    x = 0;
+    if (false || ((x = 4) == 4)) {
+        // rien
+    }
+    println(x);
+
+    // Court-circuit qui évite une erreur fatale (division par zéro)
+    x = 1;
+    if (true || ((1 / (x = 0)) == 0)) {
+        // RHS ne doit jamais s'exécuter
+    }
+    println(1);
+}

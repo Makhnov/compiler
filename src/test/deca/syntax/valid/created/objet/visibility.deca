@@ -1,0 +1,17 @@
+// Description:
+//   Test d'un programme Deca avec différentes visibilités.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 14/01/2026
+
+class Class {
+    protected int i;
+    protected float f;
+    protected boolean b;
+    protected int public;
+}
+
+

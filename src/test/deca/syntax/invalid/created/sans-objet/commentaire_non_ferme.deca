@@ -1,0 +1,11 @@
+// Description:
+//   Test d'un programme Deca avec commentaire invalide.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 18/12/2025
+{
+    /* Ceci est un commentaire invalide (non fermé)
+}

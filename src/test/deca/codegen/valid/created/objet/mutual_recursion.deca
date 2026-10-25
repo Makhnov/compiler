@@ -1,0 +1,40 @@
+// Description:
+//    Test de la récursivité avec Factorielle et Fibonacci  
+//
+// Resultats:
+//  17
+//  9
+//    
+//    
+//    
+//
+// Historique:
+//    cree le 08/01/2026
+
+
+class MutualRecursion{
+
+    int A(int n) {
+        if (n <= 1){
+            return 1;
+        }
+        return this.B(n+2);
+    }
+
+    int B(int n) {
+        return this.A(n-3)+4;
+    }
+
+}
+
+{
+    MutualRecursion mr = new MutualRecursion();
+    int x = mr.A(5), y = mr.B(5);
+    if (x == 17 && y == 9) {
+        println(x);
+        println(y);
+    } else {
+        println("KO");
+        1/0;
+    }
+}

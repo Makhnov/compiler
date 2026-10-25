@@ -1,0 +1,17 @@
+// Description:
+//    Test de déréférencement de null en Deca.
+//
+// Resultats:
+//
+// Historique:
+//    cree le 08/01/2026
+class Dummy {
+    int value;
+}
+
+{
+    Dummy d = null;
+    // Tentative de déréférencement de null
+    int v = d.value; // Devrait provoquer une erreur de déréférencement de null
+    println(v);
+}

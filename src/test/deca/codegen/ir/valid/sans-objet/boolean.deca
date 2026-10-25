@@ -1,0 +1,52 @@
+// Description:
+//    Test des booleans 
+//
+// Resultats:
+//    Boolean AND et NOT fonctionne correctement
+//    Boolean OR fonctionne correctement
+//    Boolean AND avec false fonctionne correctement
+//    Boolean OR avec true fonctionne correctement
+//    Boolean complexe avec NOT, OR et AND fonctionne correctement
+//
+// Historique:
+//    cree le 06/01/2026
+
+{
+    boolean a = true;
+    boolean b = false;
+
+    if (a && !b) {
+        println("Boolean AND et NOT fonctionne correctement");
+    } else {
+        println("Erreur dans Boolean AND ou NOT");
+        1/0;
+    }
+
+    if (a || b) {
+        println("Boolean OR fonctionne correctement");
+    } else {
+        println("Erreur dans Boolean OR");
+        1/0;
+    }
+
+    if (a && b) {
+        println("Erreur dans Boolean AND");
+        1/0;
+    } else {
+        println("Boolean AND avec false fonctionne correctement");
+    }
+
+    if (!a || b) {
+        println("Erreur dans Boolean OR ou NOT");
+        1/0;
+    } else {
+        println("Boolean OR avec true fonctionne correctement");
+    }
+    
+    if (!a || !b && a){
+        println("Boolean complexe avec NOT, OR et AND fonctionne correctement");
+    } else {
+        println("Erreur dans la combinaison des Boolean AND, NOT et OR");
+        1/0;
+    }
+}

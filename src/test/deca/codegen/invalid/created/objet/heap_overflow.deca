@@ -1,0 +1,28 @@
+// Description:
+//    Test du heap overflow (dépassement de tas)
+//
+// Resultats:
+//
+// Historique:
+//    cree le 08/01/2026
+class Node {
+    Node next;
+    int value;
+}
+
+{
+    Node head = new Node();
+    int i = 1;
+    Node curr = head;
+    
+    // Création d'une longue liste chaînée pour provoquer un dépassement de tas
+    while (true) {
+        curr.next = new Node();
+        curr.value = i;
+
+        curr = curr.next;
+
+        i = i + 1;
+        
+    }
+}

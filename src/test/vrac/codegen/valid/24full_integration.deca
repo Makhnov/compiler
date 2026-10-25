@@ -1,0 +1,20 @@
+// Resultats:
+//    20
+//
+// Historique:
+class List {
+    int val;
+    List next;
+    
+    void set(int v) { val = v; }
+    void setNext(List n) { next = n; }
+    int getVal() { return val; }
+}
+{
+    List l1 = new List();
+    List l2 = new List();
+    l1.set(10);
+    l2.set(20);
+    l1.setNext(l2);
+    println(l1.next.getVal()); // Chainage : 20
+}

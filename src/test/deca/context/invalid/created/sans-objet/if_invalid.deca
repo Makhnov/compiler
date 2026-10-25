@@ -1,0 +1,13 @@
+// Description:
+//   Test d'un programme Deca avec un if invalide.
+//
+// Resultats:
+//   Erreur : Type attendu dans if : boolean
+//
+// Historique:
+//    cree le 08/01/2026
+
+{
+    if (2) {
+    }
+}

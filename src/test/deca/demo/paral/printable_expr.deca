@@ -1,0 +1,17 @@
+// Description:
+//   Test d'un programme Deca avec une expression qui est imprimable;
+//   Règle (3.31) de la grammaire attribuée
+//
+// Resultats:
+//   affiche 0.00000e+000Hello
+//
+// Historique:
+//    cree le 19/12/2025
+
+{
+    float x;
+    int y;
+    print(x);
+    print(y);
+    print("Hello");
+}

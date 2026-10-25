@@ -1,0 +1,58 @@
+// Description:
+//   Test instanceof en Deca
+//
+// Resultats:
+//    okokokok
+//
+// Historique:
+//    cree le 05/01/2026
+
+
+class A {
+}
+
+
+class B extends A {
+}
+
+class C extends B {
+}
+
+class D extends B {
+}
+
+{
+    B b = new B();
+
+    A a = (A)(b);
+
+    C c = new C();
+
+    if(a instanceof B) {
+        print("ok");
+    } else {
+        print("ko");
+        1/0;
+    }
+
+    if(b instanceof B) {
+        print("ok");
+    } else {
+        print("ko");
+        1/0;
+    }
+
+    if(b instanceof A) {
+        print("ok");
+    } else {
+        print("ko");
+        1/0;
+    }
+
+    if (c instanceof A && c instanceof B && c instanceof C) {
+        print("ok");
+    } else {
+        print("ko");
+        1/0;
+    }  
+}

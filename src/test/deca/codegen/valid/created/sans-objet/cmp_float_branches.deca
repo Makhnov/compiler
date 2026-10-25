@@ -1,0 +1,61 @@
+// Description:
+//    Test des comparaisons avec floats
+//
+// Resultats:
+//    f1 == f2: true
+//    f1 != f3: true
+//    f1 < f3: true
+//    f3 > f1: true
+//    f1 <= f2: true
+//    f3 >= f1: true
+//
+// Historique:
+//    cree le 17/01/2026
+
+{
+    float f1 = 3.14;
+    float f2 = 3.14;
+    float f3 = 6.28;
+
+    if (f1 == f2) {
+        println("f1 == f2: true");
+    } else {
+        println("f1 == f2: false");
+        1/0;
+    }
+
+    if (f1 != f3) {
+        println("f1 != f3: true");
+    } else {
+        println("f1 != f3: false");
+        1/0;
+    }
+
+    if (f1 < f3) {
+        println("f1 < f3: true");
+    } else {
+        println("f1 < f3: false");
+        1/0;
+    }
+
+    if (f3 > f1) {
+        println("f3 > f1: true");
+    } else {
+        println("f3 > f1: false");
+        1/0;
+    }
+
+    if (f1 <= f2) {
+        println("f1 <= f2: true");
+    } else {
+        println("f1 <= f2: false");
+        1/0;
+    }
+
+    if (f3 >= f1) {
+        println("f3 >= f1: true");
+    } else {
+        println("f3 >= f1: false");
+        1/0;
+    }
+}

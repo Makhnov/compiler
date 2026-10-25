@@ -1,0 +1,12 @@
+// Description:
+//   Test d'un programme Deca avec une déclaration void invalide.
+//
+// Resultats:
+//   Erreur : Déclaration d'un type void impossible
+//
+// Historique:
+//    cree le 08/01/2026
+
+{
+    void var;
+}

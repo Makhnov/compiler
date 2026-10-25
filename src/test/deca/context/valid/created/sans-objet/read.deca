@@ -1,0 +1,17 @@
+// Description:
+// Test les expr de type read
+//
+// Resultats:
+//    ?
+//    ?
+//
+// Historique:
+//    cree le 18/12/2025
+
+{
+    int x = readInt();
+    float f = readFloat();
+    
+    println(readInt());
+    println(readFloat());
+}

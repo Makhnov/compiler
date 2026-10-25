@@ -1,0 +1,16 @@
+// Description:
+//    Test avec un include simple.
+//
+// Resultats:
+//    10
+//
+// Historique:
+//    cree le 12/01/2026
+
+
+{
+    #include "basic.decah"
+    int x = 32;
+
+    println(x - y);
+}

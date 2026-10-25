@@ -1,0 +1,28 @@
+// Description:
+//   Test d'un programme Deca avec la déclaration d'une méthode dans une classe.
+//
+// Resultats:
+//   (aucun output) 
+//
+// Historique:
+//    cree le 17/12/2025
+
+class SampleClass {
+    int sampleField;
+    
+    void sampleMethod(int param) {
+        sampleField = param * 2;
+    }
+}
+
+class Class {
+    Class classe;
+    Class getClass() {
+        return classe;
+    }
+}
+
+{
+    Class classe;
+    classe.classe.getclasse().classe = null; 
+}
