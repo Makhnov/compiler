@@ -23,4 +23,4 @@ src/test/script/logs/
 *.qbe
 
 # Documents persos
-docs/
+# docs/
